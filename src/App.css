@@ -6,10 +6,14 @@
 h1 {
   font-size: 2rem;
   margin-bottom: 20px;
+  
 }
 
 .category {
   margin: 20px;
+  box-shadow: 0 0 7px rgba(192, 192, 192, 2.5);
+  width: auto;
+  height: auto;
 }
 
 
@@ -33,9 +37,10 @@ h1 {
 }
 
 .moodboard-preview img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   margin: 5px;
+  box-shadow: 0 0 5px rgba(192, 192, 192, 2.5);
 }
 
 form input {
@@ -59,5 +64,5 @@ form button:hover {
   width: 280px;
   margin-top: 20px;
   margin-bottom: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 0, 2.5);
+  box-shadow: 0 0 10px rgba(192, 192, 192, 2.5);
 }
