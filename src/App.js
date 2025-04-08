@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import emailjs from 'emailjs-com';
-
+import html2canvas from 'html2canvas';
 
 // Sample images for categories (replace with actual images when available)
 
@@ -53,40 +53,8 @@ function App() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
 
-  /*const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nYour Moodboard is ready!`);
 
-  };*/
- /* 
-  const handleSubmit = (e) => {
-  e.preventDefault();
-
-  const templateParams = {
-    name,
-    email,
-    phone,
-    wall: selectedWall.name,
-    furniture: selectedFurniture.name,
-    lighting: selectedLighting.name,
-    flooring: selectedFlooring.name,
-    wallImage: window.location.origin + selectedWall.image,
-    furnitureImage: window.location.origin + selectedFurniture.image,
-    lightingImage: window.location.origin + selectedLighting.image,
-    flooringImage: window.location.origin + selectedFlooring.image
-  };
-
-  emailjs.send('your_service_id', 'your_template_id', templateParams, 'your_user_id')
-    .then((response) => {
-      alert('Moodboard sent to your email with a 10% discount code!');
-    }, (err) => {
-      console.error('FAILED...', err);
-      alert('Failed to send email. Please try again.');
-    });
-};
-*/
-
-const handleSubmit = (e) => {
+/*const handleSubmit = (e) => {
   e.preventDefault();
 
   const templateParams = {
@@ -117,6 +85,33 @@ const handleSubmit = (e) => {
     console.error('Email failed to send:', err);
     alert('Oops! Something went wrong. Please try again.');
   });
+};*/
+
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  // Prepare the email parameters
+  const templateParams = {
+    name: name,
+    email: email,
+    phone: phone,
+    selectedWall: selectedWall.name,
+    selectedFurniture: selectedFurniture.name,
+    selectedLighting: selectedLighting.name,
+    selectedFlooring: selectedFlooring.name,
+  };
+
+  // Send the email using emailjs
+  emailjs.send('service_59fh789', 'template_p6alfzs', templateParams, 'cZRjJM3qtUzQmjiOv')
+    .then((response) => {
+      console.log('Email sent successfully:', response);
+      alert('Your Moodboard is ready! Check your email for the details.');
+    })
+    .catch((error) => {
+      console.error('Error sending email:', error);
+      alert('There was an error sending your email. Please try again.');
+    });
 };
 
 
@@ -187,7 +182,7 @@ const handleSubmit = (e) => {
 
 
 <div className="moodboard-preview">
-  <h2>Your Moodboard</h2>
+  <h2>Here is Your Mood board ..!</h2>
   <div>
     <img src={selectedWall.image} alt="Wall" />
     <img src={selectedFurniture.image} alt="Furniture" />
@@ -198,7 +193,7 @@ const handleSubmit = (e) => {
 
 
 <form onSubmit={handleSubmit}>
-  <h2>Enter Your Details</h2>
+  <h2>Enter Your Details to send your Mood Board & a  10% Discount!</h2>
   <input
     type="text"
     placeholder="Name"
@@ -220,9 +215,10 @@ const handleSubmit = (e) => {
     onChange={(e) => setPhone(e.target.value)}
     required
   />
+  <div>
   <button type="submit">Submit</button>
+  </div>
 </form>
-
 
 
     </div>
