@@ -25,7 +25,22 @@ const furnitureStyles = [
   { id: 5, name: 'fstyle5', image: '/assets/fstyle5.jpg' },
   { id: 6, name: 'fstyle6', image: '/assets/fstyle6.jpg' },
   { id: 7, name: 'fstyle7', image: '/assets/fstyle7.jpg' },
-  { id: 8, name: 'fstyle8', image: '/assets/fstyle8.jpg' }
+  { id: 8, name: 'fstyle8', image: '/assets/fstyle8.jpg' },
+  { id: 9, name: 'fstyle9', image: '/assets/fstyle9.jpg' },
+  { id: 10, name: 'fstyle10', image: '/assets/fstyle10.jpg' }
+];
+
+const wallStyles = [
+  { id: 1, name: 'wstyle1', image: '/assets/wstyle1.png' },
+  { id: 2, name: 'wstyle2', image: '/assets/wstyle2.png' },
+  { id: 3, name: 'wstyle3', image: '/assets/wstyle3.png' },
+  { id: 4, name: 'wstyle4', image: '/assets/wstyle4.png' },
+  { id: 5, name: 'wstyle5', image: '/assets/wstyle5.png' },
+  { id: 6, name: 'wstyle6', image: '/assets/wstyle6.png' },
+  { id: 7, name: 'wstyle7', image: '/assets/wstyle7.png' },
+  { id: 8, name: 'wstyle8', image: '/assets/wstyle8.png' },
+  { id: 9, name: 'wstyle9', image: '/assets/wstyle9.png' }
+  
 ];
 
 
@@ -37,7 +52,8 @@ const lightingStyles = [
   { id: 4, name: 'lstyle4', image: '/assets/lstyle4.jpg' },
   { id: 5, name: 'lstyle5', image: '/assets/lstyle5.jpg' },
   { id: 6, name: 'lstyle6', image: '/assets/lstyle6.jpg' },
-  { id: 7, name: 'lstyle7', image: '/assets/lstyle7.jpg' }
+  { id: 7, name: 'lstyle7', image: '/assets/lstyle7.jpg' },
+  { id: 8, name: 'lstyle8', image: '/assets/lstyle8.jpg' }
 ];
 
 
@@ -57,6 +73,8 @@ function App() {
   const [selectedFurniture, setSelectedFurniture] = useState(furnitureStyles[0]);
   const [selectedLighting, setSelectedLighting] = useState(lightingStyles[0]);
   const [selectedFlooring, setSelectedFlooring] = useState(FlooringStyles[0]);
+  const [selectedWallStyle, setSelectedWallStyle] = useState(wallStyles[0]);
+
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -67,15 +85,21 @@ const handleSubmit = (e) => {
   e.preventDefault();
 
   // Prepare the email parameters
-  const templateParams = {
-    name: name,
-    email: email,
-    phone: phone,
-    selectedWall: selectedWall.name,
-    selectedFurniture: selectedFurniture.name,
-    selectedLighting: selectedLighting.name,
-    selectedFlooring: selectedFlooring.name,
-  };
+const templateParams = {
+  name,
+  phone,
+  selectedWall: selectedWall.name,
+  selectedFurniture: selectedFurniture.name,
+  selectedWallStyle: selectedWallStyle.name,
+  selectedLighting: selectedLighting.name,
+  selectedFlooring: selectedFlooring.name,
+  wallImage: selectedWall.image,
+  furnitureImage: selectedFurniture.image,
+  wallStyleImage: selectedWallStyle.image,
+  lightingImage: selectedLighting.image,
+  flooringImage: selectedFlooring.image,
+};
+
 
   // Send the email using emailjs
   emailjs.send('service_59fh789', 'template_p6alfzs', templateParams, 'cZRjJM3qtUzQmjiOv')
@@ -127,6 +151,20 @@ const handleSubmit = (e) => {
       </div>
 
       <div className="category">
+        <h2>Choose Wall Style</h2>
+        {wallStyles.map((wallStyles) => (
+          <img
+            key={wallStyles.id}
+            src={wallStyles.image}
+            alt={wallStyles.name}
+            onClick={() => setSelectedWallStyle(wallStyles)}
+            className={selectedWallStyle?.id === wallStyles.id ? 'selected' : ''}
+          />
+        ))}
+      </div>
+
+
+      <div className="category">
         <h2>Choose Lighting Style</h2>
         {lightingStyles.map((lighting) => (
           <img
@@ -163,6 +201,7 @@ const handleSubmit = (e) => {
     <img src={selectedFurniture.image} alt="Furniture" />
     <img src={selectedLighting.image} alt="Lighting" />
     <img src={selectedFlooring.image} alt="Flooring" /> 
+	<img src={selectedWallStyle.image} alt="Wall Style" /> 
   </div>
 </div> {/* Add this closing div */}
 
