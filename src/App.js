@@ -168,7 +168,7 @@ const handleSubmit = (e) => {
 
 
 <form onSubmit={handleSubmit}>
-  <h2>Enter Your Details to send your Mood Board & a  10% Discount!</h2>
+  <h2>Enter Your Details to send your Mood Board & get 10% Discount code!</h2>
   <input
     type="text"
     placeholder="Name"
