@@ -10,7 +10,9 @@ const wallColors = [
   { id: 2, name: 'color2', image: '/assets/color2.png' },
   { id: 3, name: 'color3', image: '/assets/color3.png' },
   { id: 4, name: 'color4', image: '/assets/color4.png' },
-  { id: 5, name: 'color5', image: '/assets/color5.png' }
+  { id: 5, name: 'color5', image: '/assets/color5.png' },
+  { id: 6, name: 'color6', image: '/assets/color6.png' },
+  { id: 7, name: 'color7', image: '/assets/color7.png' }
 ];
 
 
@@ -29,7 +31,8 @@ const lightingStyles = [
   { id: 2, name: 'lstyle2', image: '/assets/lstyle2.jpg' },
   { id: 3, name: 'lstyle3', image: '/assets/lstyle3.jpg' },
   { id: 4, name: 'lstyle4', image: '/assets/lstyle4.jpg' },
-  { id: 5, name: 'lstyle5', image: '/assets/lstyle5.jpg' }
+  { id: 5, name: 'lstyle5', image: '/assets/lstyle5.jpg' },
+  { id: 6, name: 'lstyle6', image: '/assets/lstyle6.jpg' }
 ];
 
 
@@ -52,40 +55,6 @@ function App() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-
-
-/*const handleSubmit = (e) => {
-  e.preventDefault();
-
-  const templateParams = {
-    name,
-    email,
-    phone,
-    wall: selectedWall.name,
-    furniture: selectedFurniture.name,
-    lighting: selectedLighting.name,
-    flooring: selectedFlooring.name,
-    wallImage: window.location.origin + selectedWall.image,
-    furnitureImage: window.location.origin + selectedFurniture.image,
-    lightingImage: window.location.origin + selectedLighting.image,
-    flooringImage: window.location.origin + selectedFlooring.image,
-    discountCode: 'EMAN10'
-  };
-
-  emailjs.send(
-    'service_59fh789',       // replace this with your actual service ID
-    'template_p6alfzs',      // replace this with your actual template ID
-    templateParams,
-    'cZRjJM3qtUzQmjiOv'        // replace this with your EmailJS public key (user_*** or API key)
-  )
-  .then((response) => {
-    alert('Moodboard sent to your email with a 10% discount code!');
-  })
-  .catch((err) => {
-    console.error('Email failed to send:', err);
-    alert('Oops! Something went wrong. Please try again.');
-  });
-};*/
 
 
 const handleSubmit = (e) => {
