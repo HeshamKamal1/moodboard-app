@@ -195,30 +195,6 @@ const handleSubmit = (e) => {
     <img src={selectedFlooring.image} alt="Flooring" /> 
   </div>
 </div> {/* Add this closing div */}
-/*<form onSubmit={handleSubmit}>
-  <h2>Enter Your Details</h2>
-  <input
-    type="text"
-    placeholder="Name"
-    value={name}
-    onChange={(e) => setName(e.target.value)}
-  />
-  <input
-    type="email"
-    placeholder="Email"
-    value={email}
-    onChange={(e) => setEmail(e.target.value)}
-  />
-  <input
-  type="tel"
-  placeholder="Phone Number"
-  value={phone}
-  onChange={(e) => setPhone(e.target.value)}
-/>
-
-  <button type="submit">Submit</button>
-</form>
-*/
 
 
 <form onSubmit={handleSubmit}>
