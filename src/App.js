@@ -84,6 +84,8 @@ function App() {
 const handleSubmit = (e) => {
   e.preventDefault();
 
+const BASE_URL = 'https://moodboard-app-rust.vercel.app';
+
   // Prepare the email parameters
 const templateParams = {
   name,
@@ -94,11 +96,11 @@ const templateParams = {
   selectedWallStyle: selectedWallStyle.name,
   selectedLighting: selectedLighting.name,
   selectedFlooring: selectedFlooring.name,
-  wallImage: selectedWall.image,
-  furnitureImage: selectedFurniture.image,
-  wallStyleImage: selectedWallStyle.image,
-  lightingImage: selectedLighting.image,
-  flooringImage: selectedFlooring.image,
+  wallImage: `${BASE_URL}${selectedWall.image}`,
+  furnitureImage: `${BASE_URL}${selectedFurniture.image}`,
+  wallStyleImage: `${BASE_URL}${selectedWallStyle.image}`,
+  lightingImage: `${BASE_URL}${selectedLighting.image}`,
+  flooringImage: `${BASE_URL}${selectedFlooring.image}`,
 };
 
 
