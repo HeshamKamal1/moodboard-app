@@ -12,7 +12,8 @@ const wallColors = [
   { id: 4, name: 'color4', image: '/assets/color4.png' },
   { id: 5, name: 'color5', image: '/assets/color5.png' },
   { id: 6, name: 'color6', image: '/assets/color6.png' },
-  { id: 7, name: 'color7', image: '/assets/color7.png' }
+  { id: 7, name: 'color7', image: '/assets/color7.png' },
+  { id: 8, name: 'color8', image: '/assets/color8.png' }
 ];
 
 
@@ -21,7 +22,10 @@ const furnitureStyles = [
   { id: 2, name: 'fstyle2', image: '/assets/fstyle2.jpg' },
   { id: 3, name: 'fstyle3', image: '/assets/fstyle3.jpg' },
   { id: 4, name: 'fstyle4', image: '/assets/fstyle4.jpg' },
-  { id: 5, name: 'fstyle5', image: '/assets/fstyle5.jpg' }
+  { id: 5, name: 'fstyle5', image: '/assets/fstyle5.jpg' },
+  { id: 6, name: 'fstyle6', image: '/assets/fstyle6.jpg' },
+  { id: 7, name: 'fstyle7', image: '/assets/fstyle7.jpg' },
+  { id: 8, name: 'fstyle8', image: '/assets/fstyle8.jpg' }
 ];
 
 
@@ -32,7 +36,8 @@ const lightingStyles = [
   { id: 3, name: 'lstyle3', image: '/assets/lstyle3.jpg' },
   { id: 4, name: 'lstyle4', image: '/assets/lstyle4.jpg' },
   { id: 5, name: 'lstyle5', image: '/assets/lstyle5.jpg' },
-  { id: 6, name: 'lstyle6', image: '/assets/lstyle6.jpg' }
+  { id: 6, name: 'lstyle6', image: '/assets/lstyle6.jpg' },
+  { id: 7, name: 'lstyle7', image: '/assets/lstyle7.jpg' }
 ];
 
 
@@ -41,7 +46,8 @@ const FlooringStyles = [
   { id: 2, name: 'flooring2', image: '/assets/flooring2.jpg' },
   { id: 3, name: 'flooring3', image: '/assets/flooring3.jpg' },
   { id: 4, name: 'flooring4', image: '/assets/flooring4.jpg' },
-  { id: 5, name: 'flooring5', image: '/assets/flooring5.jpg' }
+  { id: 5, name: 'flooring5', image: '/assets/flooring5.jpg' },
+  { id: 6, name: 'flooring6', image: '/assets/flooring6.jpg' }
 ];
 
 
