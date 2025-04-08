@@ -88,6 +88,7 @@ const handleSubmit = (e) => {
 const templateParams = {
   name,
   phone,
+  email,
   selectedWall: selectedWall.name,
   selectedFurniture: selectedFurniture.name,
   selectedWallStyle: selectedWallStyle.name,
