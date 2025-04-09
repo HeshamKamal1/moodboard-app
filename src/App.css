@@ -11,7 +11,6 @@ body {
   font-family: sans-serif;
 }
 
-
 h1 {
   font-size: 2rem;
   margin-bottom: 20px;
@@ -68,8 +67,8 @@ h1 {
 .moodboard-preview img {
   width: 140px;
   height: 140px;
-  margin: 5px;
-  box-shadow: 0 0 5px rgba(192, 192, 192, 2.5);
+  /*margin: 5px;
+  box-shadow: 0 0 5px rgba(192, 192, 192, 2.5);*/
   border-radius: 16px;
 }
 
@@ -135,7 +134,7 @@ form button:hover {
   width: 130px;
   transition: transform 0.3s ease;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);*/
   opacity: 0.95;
 }
 
@@ -156,7 +155,7 @@ form button:hover {
   left: 100px;
   transition: transform 0.3s ease;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);*/
   opacity: 0.95;
 }
 .moodboard-polaroid-frame {
