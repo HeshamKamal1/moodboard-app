@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import './App.css';
 import emailjs from 'emailjs-com';
 import html2canvas from 'html2canvas';
-
-// Sample images for categories (replace with actual images when available)
 
 const wallColors = [
   { id: 1, name: 'color1', image: '/assets/color1.png' },
@@ -15,7 +13,6 @@ const wallColors = [
   { id: 7, name: 'color7', image: '/assets/color7.png' },
   { id: 8, name: 'color8', image: '/assets/color8.png' }
 ];
-
 
 const furnitureStyles = [
   { id: 1, name: 'fstyle1', image: '/assets/fstyle1.jpg' },
@@ -40,10 +37,7 @@ const wallStyles = [
   { id: 7, name: 'wstyle7', image: '/assets/wstyle7.png' },
   { id: 8, name: 'wstyle8', image: '/assets/wstyle8.png' },
   { id: 9, name: 'wstyle9', image: '/assets/wstyle9.png' }
-  
 ];
-
-
 
 const lightingStyles = [
   { id: 1, name: 'lstyle1', image: '/assets/lstyle1.jpg' },
@@ -56,7 +50,6 @@ const lightingStyles = [
   { id: 8, name: 'lstyle8', image: '/assets/lstyle8.jpg' }
 ];
 
-
 const FlooringStyles = [
   { id: 1, name: 'flooring1', image: '/assets/flooring1.jpg' },
   { id: 2, name: 'flooring2', image: '/assets/flooring2.jpg' },
@@ -66,20 +59,16 @@ const FlooringStyles = [
   { id: 6, name: 'flooring6', image: '/assets/flooring6.jpg' }
 ];
 
-
-
 function App() {
   const [selectedWall, setSelectedWall] = useState(wallColors[0]);
   const [selectedFurniture, setSelectedFurniture] = useState(furnitureStyles[0]);
   const [selectedLighting, setSelectedLighting] = useState(lightingStyles[0]);
   const [selectedFlooring, setSelectedFlooring] = useState(FlooringStyles[0]);
   const [selectedWallStyle, setSelectedWallStyle] = useState(wallStyles[0]);
-
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-
+  const moodboardRef = useRef(null);	
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -118,132 +107,108 @@ const templateParams = {
 
 
 
-  return (
-    <div className="App">
-	
-	
-  <img src="/assets/logo.jpg" alt="Designer Logo" className="logo" />
+  const [selectedPhotos, setSelectedPhotos] = useState([]);
+  const [photoPositions, setPhotoPositions] = useState([]);
+  
+  
+  
   
 
+ useEffect(() => {
+  const spacing = 125; // Space between photos
+  const totalWidth = 3 * spacing; // 3 photos horizontally
+  const totalHeight = Math.ceil([selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring].length / 2) * spacing; // Photos arranged in rows
+
+  const positions = [selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring].map((_, index) => {
+    const xOffset = (index % 3) * spacing - totalWidth / 4; // Shift photos to the center horizontally
+    const yOffset = Math.floor(index / 3) * spacing - totalHeight / 5; // Shift photos to the center vertically
+    const rotation = Math.floor(Math.random() * 12 - 8); // Random rotation
+    return { rotation, xOffset, yOffset };
+  });
+
+  setPhotoPositions(positions);
+}, [selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring]);
+
+
+  return (
+    <div className="App">
+      <img src="/assets/logo.jpg" alt="Designer Logo" className="logo" />
       <h1>Create Your Own Moodboard With Eman Designs</h1>
 
-<div className="category">
-  <h2>Choose Color Schema</h2>
-  {wallColors.map((wall) => (
-    <img
-      key={wall.id}
-      src={wall.image}
-      alt={wall.name}
-      onClick={() => setSelectedWall(wall)}
-      className={`wall-color-img ${selectedWall.id === wall.id ? 'selected' : ''}`}
-    />
-  ))}
-</div>
-
+      <div className="category">
+        <h2>Choose Color Schema</h2>
+        {wallColors.map((wall) => (
+          <img key={wall.id} src={wall.image} alt={wall.name} onClick={() => setSelectedWall(wall)} className={`wall-color-img ${selectedWall.id === wall.id ? 'selected' : ''}`} />
+        ))}
+      </div>
 
       <div className="category">
         <h2>Choose Furniture Style</h2>
         {furnitureStyles.map((furniture) => (
-          <img
-            key={furniture.id}
-            src={furniture.image}
-            alt={furniture.name}
-            onClick={() => setSelectedFurniture(furniture)}
-            className={selectedFurniture.id === furniture.id ? 'selected' : ''}
-          />
+          <img key={furniture.id} src={furniture.image} alt={furniture.name} onClick={() => setSelectedFurniture(furniture)} className={selectedFurniture.id === furniture.id ? 'selected' : ''} />
         ))}
       </div>
 
       <div className="category">
         <h2>Choose Wall Style</h2>
-        {wallStyles.map((wallStyles) => (
-          <img
-            key={wallStyles.id}
-            src={wallStyles.image}
-            alt={wallStyles.name}
-            onClick={() => setSelectedWallStyle(wallStyles)}
-            className={selectedWallStyle?.id === wallStyles.id ? 'selected' : ''}
-          />
+        {wallStyles.map((style) => (
+          <img key={style.id} src={style.image} alt={style.name} onClick={() => setSelectedWallStyle(style)} className={selectedWallStyle?.id === style.id ? 'selected' : ''} />
         ))}
       </div>
-
 
       <div className="category">
         <h2>Choose Lighting Style</h2>
         {lightingStyles.map((lighting) => (
-          <img
-            key={lighting.id}
-            src={lighting.image}
-            alt={lighting.name}
-            onClick={() => setSelectedLighting(lighting)}
-            className={selectedLighting.id === lighting.id ? 'selected' : ''}
-          />
+          <img key={lighting.id} src={lighting.image} alt={lighting.name} onClick={() => setSelectedLighting(lighting)} className={selectedLighting.id === lighting.id ? 'selected' : ''} />
         ))}
       </div>
 
+      <div className="category">
+        <h2>Choose Flooring Style</h2>
+        {FlooringStyles.map((flooring) => (
+          <img key={flooring.id} src={flooring.image} alt={flooring.name} onClick={() => setSelectedFlooring(flooring)} className={selectedFlooring.id === flooring.id ? 'selected' : ''} />
+        ))}
+      </div>
 
-<div className="category">
-  <h2>Choose Flooring Style</h2>
-  {FlooringStyles.map((flooring) => (
-    <img
-      key={flooring.id}
-      src={flooring.image}
-      alt={flooring.name}
-      onClick={() => setSelectedFlooring(flooring)} 
-      className={selectedFlooring.id === flooring.id ? 'selected' : ''}  
-    />
-  ))}
+<div className="moodboard-preview" ref={moodboardRef}>
+  <div className="moodboard-polaroid-frame">
+    {[selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring].map((item, index) => {
+      const position = photoPositions[index] || { rotation: 0, xOffset: 0, yOffset: 0 };
+const { rotation, xOffset, yOffset } = position;
+
+
+      return (
+        <img
+          key={index}
+          src={item.image}
+          alt={item.name}
+          className="stacked-photo"
+          style={{
+            transform: `rotate(${rotation}deg) translate(${xOffset}px, ${yOffset}px)`,
+            zIndex: index,
+          }}
+        />
+      );
+    })}
+    <div className="caption">Your Moodboard .. Great choices!</div>
+  </div>
 </div>
 
 
+      <form onSubmit={handleSubmit}>
+        <h2>Enter Your Details to send your Mood Board & get 10% Discount code!</h2>
+        <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
+        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <input type="tel" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+        <div>
+		<button type="submit">Submit</button>
+		</div>
+      </form>
 
-
-<div className="moodboard-preview">
-  <h2>Here is Your Mood board ..!</h2>
-  <div>
-    <img src={selectedWall.image} alt="Wall" />
-    <img src={selectedFurniture.image} alt="Furniture" />
-    <img src={selectedLighting.image} alt="Lighting" />
-    <img src={selectedFlooring.image} alt="Flooring" /> 
-	<img src={selectedWallStyle.image} alt="Wall Style" /> 
-  </div>
-</div> {/* Add this closing div */}
-
-
-<form onSubmit={handleSubmit}>
-  <h2>Enter Your Details to send your Mood Board & get 10% Discount code!</h2>
-  <input
-    type="text"
-    placeholder="Name"
-    value={name}
-    onChange={(e) => setName(e.target.value)}
-    required
-  />
-  <input
-    type="email"
-    placeholder="Email"
-    value={email}
-    onChange={(e) => setEmail(e.target.value)}
-    required
-  />
-  <input
-    type="tel"
-    placeholder="Phone Number"
-    value={phone}
-    onChange={(e) => setPhone(e.target.value)}
-    required
-  />
-  <div>
-  <button type="submit">Submit</button>
-  </div>
-</form>
-
-<div className="qr-code">
-  <h3>Scan this QR code to visit our Instagram!</h3>
-  <img src="/assets/qr.png" alt="QR Code" className="qr-image" />
-</div>
-
-
+      <div className="qr-code">
+        <h3>Scan this QR code to visit our Instagram!</h3>
+        <img src="/assets/qr.png" alt="QR Code" className="qr-image" />
+      </div>
     </div>
   );
 }

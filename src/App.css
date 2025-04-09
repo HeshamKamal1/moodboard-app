@@ -66,8 +66,8 @@ h1 {
 }
 
 .moodboard-preview img {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   margin: 5px;
   box-shadow: 0 0 5px rgba(192, 192, 192, 2.5);
   border-radius: 16px;
@@ -113,4 +113,53 @@ form button:hover {
 .qr-image {
   width: 160px;
   height: 160px;
+}
+
+.moodboard-polaroid-frame {
+  position: relative;
+  width: 380px;
+  height: 500px;
+  background: white;
+  padding: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  margin: 30px auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stacked-photo {
+  position: absolute;
+  width: 130px;
+  transition: transform 0.3s ease;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0.95;
+}
+
+.caption {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Patrick Hand', cursive; /* Optional handwritten style */
+  font-size: 1rem;
+  color: #333;
+}
+.stacked-photo {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 100px; /* this centers things more initially */
+  left: 100px;
+  transition: transform 0.3s ease;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0.95;
+}
+.moodboard-polaroid-frame {
+  width: 380px;  /* increase if needed */
+  height: 360px;
 }
