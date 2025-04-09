@@ -24,7 +24,8 @@ const furnitureStyles = [
   { id: 7, name: 'fstyle7', image: '/assets/fstyle7.jpg' },
   { id: 8, name: 'fstyle8', image: '/assets/fstyle8.jpg' },
   { id: 9, name: 'fstyle9', image: '/assets/fstyle9.jpg' },
-  { id: 10, name: 'fstyle10', image: '/assets/fstyle10.jpg' }
+  { id: 10, name: 'fstyle10', image: '/assets/fstyle10.jpg' },
+  { id: 11, name: 'fstyle11', image: '/assets/fstyle11.png' }
 ];
 
 const wallStyles = [
@@ -36,7 +37,8 @@ const wallStyles = [
   { id: 6, name: 'wstyle6', image: '/assets/wstyle6.png' },
   { id: 7, name: 'wstyle7', image: '/assets/wstyle7.png' },
   { id: 8, name: 'wstyle8', image: '/assets/wstyle8.png' },
-  { id: 9, name: 'wstyle9', image: '/assets/wstyle9.png' }
+  { id: 9, name: 'wstyle9', image: '/assets/wstyle9.png' },
+  { id: 10, name: 'wstyle10', image: '/assets/wstyle10.png' }
 ];
 
 const lightingStyles = [
@@ -47,7 +49,8 @@ const lightingStyles = [
   { id: 5, name: 'lstyle5', image: '/assets/lstyle5.jpg' },
   { id: 6, name: 'lstyle6', image: '/assets/lstyle6.jpg' },
   { id: 7, name: 'lstyle7', image: '/assets/lstyle7.jpg' },
-  { id: 8, name: 'lstyle8', image: '/assets/lstyle8.jpg' }
+  { id: 8, name: 'lstyle8', image: '/assets/lstyle8.jpg' },
+  { id: 9, name: 'lstyle9', image: '/assets/lstyle9.png' }
 ];
 
 const FlooringStyles = [
@@ -56,7 +59,8 @@ const FlooringStyles = [
   { id: 3, name: 'flooring3', image: '/assets/flooring3.jpg' },
   { id: 4, name: 'flooring4', image: '/assets/flooring4.jpg' },
   { id: 5, name: 'flooring5', image: '/assets/flooring5.jpg' },
-  { id: 6, name: 'flooring6', image: '/assets/flooring6.jpg' }
+  { id: 6, name: 'flooring6', image: '/assets/flooring6.jpg' },
+  { id: 7, name: 'flooring7', image: '/assets/flooring7.png' }
 ];
 
 function App() {
