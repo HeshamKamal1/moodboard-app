@@ -127,18 +127,19 @@ const templateParams = {
 
       <h1>Create Your Own Moodboard With Eman Designs</h1>
 
-      <div className="category">
-        <h2>Choose Wall Color Schema</h2>
-        {wallColors.map((wall) => (
-          <img
-            key={wall.id}
-            src={wall.image}
-            alt={wall.name}
-            onClick={() => setSelectedWall(wall)}
-            className={selectedWall.id === wall.id ? 'selected' : ''}
-          />
-        ))}
-      </div>
+<div className="category">
+  <h2>Choose Color Schema</h2>
+  {wallColors.map((wall) => (
+    <img
+      key={wall.id}
+      src={wall.image}
+      alt={wall.name}
+      onClick={() => setSelectedWall(wall)}
+      className={`wall-color-img ${selectedWall.id === wall.id ? 'selected' : ''}`}
+    />
+  ))}
+</div>
+
 
       <div className="category">
         <h2>Choose Furniture Style</h2>
