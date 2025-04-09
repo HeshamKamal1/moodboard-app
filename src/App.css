@@ -2,6 +2,7 @@
   text-align: center;
   padding: 20px;
   background-color: #F5F5F5; /* <== add this line */
+  display: flex; flex-direction: column; align-items: center;
 }
 
 body {
@@ -20,6 +21,7 @@ h1 {
 .category {
   margin: 8px;
   box-shadow: 0 0 7px rgba(192, 192, 192, 2.5);
+  border-radius: 16px;
   width: auto;
   height: auto;
 }
@@ -35,6 +37,7 @@ h1 {
   cursor: pointer;
   border: 3px solid transparent;
   transition: border-color 0.3s;
+  border-radius: 16px;
 }
 
 .category .wall-color-img {
@@ -50,12 +53,14 @@ h1 {
   cursor: pointer;
   border: 3px solid transparent;
   transition: border-color 0.3s;
+  border-radius: 16px;
 }
 
 
 .selected {
   border: 6px solid red;
   box-shadow: 0 0 10px rgba(255, 255, 0, 2.5);
+  border-radius: 16px;
   transform: scale(1.15);
 }
 
@@ -64,6 +69,7 @@ h1 {
   height: 160px;
   margin: 5px;
   box-shadow: 0 0 5px rgba(192, 192, 192, 2.5);
+  border-radius: 16px;
 }
 
 form input {
@@ -88,4 +94,22 @@ form button:hover {
   margin-top: 20px;
   margin-bottom: 20px;
   box-shadow: 0 0 25px rgba(192, 192, 192, 2.5);
+}
+.qr-code {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  display: inline-block;
+  box-shadow: 0 0 15px rgba(192, 192, 192, 0.8);
+}
+
+.qr-code h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.qr-image {
+  width: 160px;
+  height: 160px;
 }

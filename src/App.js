@@ -238,6 +238,11 @@ const templateParams = {
   </div>
 </form>
 
+<div className="qr-code">
+  <h3>Scan this QR code to visit our Instagram!</h3>
+  <img src="/assets/qr.png" alt="QR Code" className="qr-image" />
+</div>
+
 
     </div>
   );
