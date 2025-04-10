@@ -90,10 +90,10 @@ form button:hover {
   background-color: #e14c29;
 }
 .logo {
-  width: 330px;
+  width: 360px;
   margin-top: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 0 25px rgba(192, 192, 192, 2.5);
+  box-shadow: 0 0 20px rgba(192, 192, 192, 2.5);
 }
 .qr-code {
   margin-top: 40px;
