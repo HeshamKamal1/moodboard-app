@@ -119,7 +119,7 @@ const templateParams = {
   
 
  useEffect(() => {
-  const spacing = 125; // Space between photos
+  const spacing = 120; // Space between photos
   const totalWidth = 3 * spacing; // 3 photos horizontally
   const totalHeight = Math.ceil([selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring].length / 2) * spacing; // Photos arranged in rows
 
