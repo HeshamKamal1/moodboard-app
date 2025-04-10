@@ -159,6 +159,23 @@ form button:hover {
   opacity: 0.95;
 }
 .moodboard-polaroid-frame {
-  width: 380px;  /* increase if needed */
-  height: 360px;
+  width: 400px;  /* increase if needed */
+  height: 390px;
 }
+.moodboard-polaroid-frame {
+  position: relative;
+}
+
+.polaroid-border-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; /* Let clicks go through */
+  box-sizing: border-box;
+  border: var(--overlay-border, 7px) solid white; /* Adjust thickness here */
+  z-index: 99; /* Should be above all stacked photos */
+  border-radius: 8px;
+}
+
