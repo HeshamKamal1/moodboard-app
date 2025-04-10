@@ -114,12 +114,9 @@ const templateParams = {
   const [selectedPhotos, setSelectedPhotos] = useState([]);
   const [photoPositions, setPhotoPositions] = useState([]);
   
-  
-  
-  
 
  useEffect(() => {
-  const spacing = 120; // Space between photos
+  const spacing = 125; // Space between photos
   const totalWidth = 3 * spacing; // 3 photos horizontally
   const totalHeight = Math.ceil([selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring].length / 2) * spacing; // Photos arranged in rows
 
@@ -178,8 +175,7 @@ const templateParams = {
   <div className="moodboard-polaroid-frame">
     {[selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring].map((item, index) => {
       const position = photoPositions[index] || { rotation: 0, xOffset: 0, yOffset: 0 };
-const { rotation, xOffset, yOffset } = position;
-
+      const { rotation, xOffset, yOffset } = position;
 
       return (
         <img
@@ -194,6 +190,10 @@ const { rotation, xOffset, yOffset } = position;
         />
       );
     })}
+
+    {/* Add the white border mask over the photos */}
+    <div className="polaroid-border-overlay"></div>
+
     <div className="caption">Your Moodboard .. Great choices!</div>
   </div>
 </div>
