@@ -65,8 +65,8 @@ h1 {
 }
 
 .moodboard-preview img {
-  width: 140px;
-  height: 140px;
+  width: 145px;
+  height: 145px;
   /*margin: 5px;
   box-shadow: 0 0 5px rgba(192, 192, 192, 2.5);*/
   border-radius: 16px;
@@ -174,7 +174,7 @@ form button:hover {
   bottom: 0;
   pointer-events: none; /* Let clicks go through */
   box-sizing: border-box;
-  border: var(--overlay-border, 7px) solid white; /* Adjust thickness here */
+  border: var(--overlay-border, 10px) solid white; /* Adjust thickness here */
   z-index: 99; /* Should be above all stacked photos */
   border-radius: 8px;
 }

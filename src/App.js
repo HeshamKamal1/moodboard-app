@@ -116,13 +116,13 @@ const templateParams = {
   
 
  useEffect(() => {
-  const spacing = 125; // Space between photos
+  const spacing = 130; // Space between photos
   const totalWidth = 3 * spacing; // 3 photos horizontally
   const totalHeight = Math.ceil([selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring].length / 2) * spacing; // Photos arranged in rows
 
   const positions = [selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring].map((_, index) => {
-    const xOffset = (index % 3) * spacing - totalWidth / 4; // Shift photos to the center horizontally
-    const yOffset = Math.floor(index / 3) * spacing - totalHeight / 5; // Shift photos to the center vertically
+    const xOffset = (index % 3) * spacing - totalWidth / 5; // Shift photos to the center horizontally
+    const yOffset = Math.floor(index / 3) * spacing - totalHeight / 7; // Shift photos to the center vertically
     const rotation = Math.floor(Math.random() * 12 - 8); // Random rotation
     return { rotation, xOffset, yOffset };
   });
