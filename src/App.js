@@ -30,7 +30,8 @@ const furnitureStyles = [
   { id: 13, name: 'fstyle13', image: '/assets/fstyle13.png' },
   { id: 14, name: 'fstyle14', image: '/assets/fstyle14.png' },
   { id: 15, name: 'fstyle15', image: '/assets/fstyle15.png' },
-
+  { id: 16, name: 'fstyle16', image: '/assets/fstyle16.png' },
+  { id: 17, name: 'fstyle17', image: '/assets/fstyle17.png' },
 ];
 
 const wallStyles = [
@@ -46,8 +47,8 @@ const wallStyles = [
   { id: 10, name: 'wstyle10', image: '/assets/wstyle10.png' },
   { id: 11, name: 'wstyle11', image: '/assets/wstyle11.png' },
   { id: 12, name: 'wstyle12', image: '/assets/wstyle12.png' },
-  { id: 11, name: 'wstyle13', image: '/assets/wstyle13.png' },
-  { id: 14, name: 'wstyle14', image: '/assets/wstyle14.png' }
+  { id: 13, name: 'wstyle13', image: '/assets/wstyle13.png' },
+
 ];
 
 const lightingStyles = [
@@ -76,7 +77,9 @@ const FlooringStyles = [
   { id: 4, name: 'flooring4', image: '/assets/flooring4.jpg' },
   { id: 5, name: 'flooring5', image: '/assets/flooring5.jpg' },
   { id: 6, name: 'flooring6', image: '/assets/flooring6.jpg' },
-  { id: 7, name: 'flooring7', image: '/assets/flooring7.png' }
+  { id: 7, name: 'flooring7', image: '/assets/flooring7.png' },
+  { id: 8, name: 'flooring8', image: '/assets/flooring8.png' },
+  { id: 9, name: 'flooring9', image: '/assets/flooring9.png' }
 ];
 
 function App() {
