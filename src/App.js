@@ -25,7 +25,12 @@ const furnitureStyles = [
   { id: 8, name: 'fstyle8', image: '/assets/fstyle8.jpg' },
   { id: 9, name: 'fstyle9', image: '/assets/fstyle9.jpg' },
   { id: 10, name: 'fstyle10', image: '/assets/fstyle10.jpg' },
-  { id: 11, name: 'fstyle11', image: '/assets/fstyle11.png' }
+  { id: 11, name: 'fstyle11', image: '/assets/fstyle11.png' },
+  { id: 12, name: 'fstyle12', image: '/assets/fstyle12.png' },
+  { id: 13, name: 'fstyle13', image: '/assets/fstyle13.png' },
+  { id: 14, name: 'fstyle14', image: '/assets/fstyle14.png' },
+  { id: 15, name: 'fstyle15', image: '/assets/fstyle15.png' },
+
 ];
 
 const wallStyles = [
@@ -38,7 +43,11 @@ const wallStyles = [
   { id: 7, name: 'wstyle7', image: '/assets/wstyle7.png' },
   { id: 8, name: 'wstyle8', image: '/assets/wstyle8.png' },
   { id: 9, name: 'wstyle9', image: '/assets/wstyle9.png' },
-  { id: 10, name: 'wstyle10', image: '/assets/wstyle10.png' }
+  { id: 10, name: 'wstyle10', image: '/assets/wstyle10.png' },
+  { id: 11, name: 'wstyle11', image: '/assets/wstyle11.png' },
+  { id: 12, name: 'wstyle12', image: '/assets/wstyle12.png' },
+  { id: 11, name: 'wstyle13', image: '/assets/wstyle13.png' },
+  { id: 14, name: 'wstyle14', image: '/assets/wstyle14.png' }
 ];
 
 const lightingStyles = [
@@ -50,7 +59,14 @@ const lightingStyles = [
   { id: 6, name: 'lstyle6', image: '/assets/lstyle6.jpg' },
   { id: 7, name: 'lstyle7', image: '/assets/lstyle7.jpg' },
   { id: 8, name: 'lstyle8', image: '/assets/lstyle8.jpg' },
-  { id: 9, name: 'lstyle9', image: '/assets/lstyle9.png' }
+  { id: 9, name: 'lstyle9', image: '/assets/lstyle9.png' },
+  { id: 10, name: 'lstyle10', image: '/assets/lstyle10.png' },
+  { id: 11, name: 'lstyle11', image: '/assets/lstyle11.png' },
+  { id: 12, name: 'lstyle12', image: '/assets/lstyle12.png' },
+  { id: 13, name: 'lstyle13', image: '/assets/lstyle13.png' },
+  { id: 14, name: 'lstyle14', image: '/assets/lstyle14.png' },
+  { id: 15, name: 'lstyle15', image: '/assets/lstyle15.png' },
+
 ];
 
 const FlooringStyles = [
@@ -209,10 +225,21 @@ const templateParams = {
 		</div>
       </form>
 
-      <div className="qr-code">
-        <h3>Scan this QR code to visit our Instagram!</h3>
-        <img src="/assets/qr.png" alt="QR Code" className="qr-image" />
-      </div>
+<div className="qr-code text-center">
+  <h3 className="mb-2 text-lg font-semibold">Scan this QR code to visit our Instagram!</h3>
+  <a
+    href="https://www.instagram.com/eman.fathallah.designs/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="/assets/qr.png"
+      alt="Follow us on Instagram"
+      className="qr-image w-24 h-24 mx-auto transition-transform duration-300 hover:scale-110 active:scale-95 hover:shadow-lg hover:shadow-pink-500/50"
+    />
+  </a>
+</div>
+
     </div>
   );
 }
