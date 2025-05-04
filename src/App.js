@@ -4,89 +4,135 @@ import emailjs from 'emailjs-com';
 import html2canvas from 'html2canvas';
 
 const wallColors = [
-  { id: 1, name: 'color1', image: '/assets/color1.png' },
-  { id: 2, name: 'color2', image: '/assets/color2.png' },
-  { id: 3, name: 'color3', image: '/assets/color3.png' },
-  { id: 4, name: 'color4', image: '/assets/color4.png' },
-  { id: 5, name: 'color5', image: '/assets/color5.png' },
-  { id: 6, name: 'color6', image: '/assets/color6.png' },
-  { id: 7, name: 'color7', image: '/assets/color7.png' },
-  { id: 8, name: 'color8', image: '/assets/color8.png' }
+  { id: 1, name: 'color1', image: '/assets/CP (1).jpg' },
+  { id: 2, name: 'color2', image: '/assets/CP (2).jpg' },
+  { id: 3, name: 'color3', image: '/assets/CP (3).jpg' },
+  { id: 4, name: 'color4', image: '/assets/CP (4).jpg' },
+  { id: 5, name: 'color5', image: '/assets/CP (5).jpg' },
+  { id: 6, name: 'color6', image: '/assets/CP (6).jpg' },
+  { id: 7, name: 'color7', image: '/assets/CP (7).jpg' },
+  { id: 8, name: 'color8', image: '/assets/CP (8).jpg' },
+  { id: 9, name: 'color8', image: '/assets/CP (9).jpg' },
+  { id: 10, name: 'color8', image: '/assets/CP (10).jpg' },
+  { id: 11, name: 'color8', image: '/assets/CP (11).jpg' },
+  { id: 12, name: 'color8', image: '/assets/CP (12).jpg' }
+  
 ];
 
 const furnitureStyles = [
-  { id: 1, name: 'fstyle1', image: '/assets/fstyle1.jpg' },
-  { id: 2, name: 'fstyle2', image: '/assets/fstyle2.jpg' },
-  { id: 3, name: 'fstyle3', image: '/assets/fstyle3.jpg' },
-  { id: 4, name: 'fstyle4', image: '/assets/fstyle4.jpg' },
-  { id: 5, name: 'fstyle5', image: '/assets/fstyle5.jpg' },
-  { id: 6, name: 'fstyle6', image: '/assets/fstyle6.jpg' },
-  { id: 7, name: 'fstyle7', image: '/assets/fstyle7.jpg' },
-  { id: 8, name: 'fstyle8', image: '/assets/fstyle8.jpg' },
-  { id: 9, name: 'fstyle9', image: '/assets/fstyle9.jpg' },
-  { id: 10, name: 'fstyle10', image: '/assets/fstyle10.jpg' },
-  { id: 11, name: 'fstyle11', image: '/assets/fstyle11.png' },
-  { id: 12, name: 'fstyle12', image: '/assets/fstyle12.png' },
-  { id: 13, name: 'fstyle13', image: '/assets/fstyle13.png' },
-  { id: 14, name: 'fstyle14', image: '/assets/fstyle14.png' },
-  { id: 15, name: 'fstyle15', image: '/assets/fstyle15.png' },
-  { id: 16, name: 'fstyle16', image: '/assets/fstyle16.png' },
-  { id: 17, name: 'fstyle17', image: '/assets/fstyle17.png' },
+  { id: 1, name: 'fstyle1', image: '/assets/FS (1).png' },
+  { id: 2, name: 'fstyle2', image: '/assets/FS (2).png' },
+  { id: 3, name: 'fstyle3', image: '/assets/FS (3).png' },
+  { id: 4, name: 'fstyle4', image: '/assets/FS (4).png' },
+  { id: 5, name: 'fstyle5', image: '/assets/FS (5).png' },
+  { id: 6, name: 'fstyle6', image: '/assets/FS (6).png' },
+  { id: 7, name: 'fstyle7', image: '/assets/FS (7).png' },
+  { id: 8, name: 'fstyle8', image: '/assets/FS (8).png' },
+  { id: 9, name: 'fstyle9', image: '/assets/FS (9).png' },
+  { id: 10, name: 'fstyle10', image: '/assets/FS (10).png' },
+  { id: 11, name: 'fstyle11', image: '/assets/FS (11).png' },
+  { id: 12, name: 'fstyle12', image: '/assets/FS (12).png' },
+  { id: 13, name: 'fstyle13', image: '/assets/FS (13).png' },
+  { id: 14, name: 'fstyle14', image: '/assets/FS (14).png' },
+  { id: 15, name: 'fstyle15', image: '/assets/FS (15).png' },
+  { id: 16, name: 'fstyle16', image: '/assets/FS (16).png' },
+  { id: 17, name: 'fstyle17', image: '/assets/FS (17).png' },
+  { id: 18, name: 'fstyle17', image: '/assets/FS (18).png' },
+  { id: 19, name: 'fstyle17', image: '/assets/FS (19).png' },
+  { id: 20, name: 'fstyle17', image: '/assets/FS (20).png' }
 ];
 
 const wallStyles = [
-  { id: 1, name: 'wstyle1', image: '/assets/wstyle1.png' },
-  { id: 2, name: 'wstyle2', image: '/assets/wstyle2.png' },
-  { id: 3, name: 'wstyle3', image: '/assets/wstyle3.png' },
-  { id: 4, name: 'wstyle4', image: '/assets/wstyle4.png' },
-  { id: 5, name: 'wstyle5', image: '/assets/wstyle5.png' },
-  { id: 6, name: 'wstyle6', image: '/assets/wstyle6.png' },
-  { id: 7, name: 'wstyle7', image: '/assets/wstyle7.png' },
-  { id: 8, name: 'wstyle8', image: '/assets/wstyle8.png' },
-  { id: 9, name: 'wstyle9', image: '/assets/wstyle9.png' },
-  { id: 10, name: 'wstyle10', image: '/assets/wstyle10.png' },
-  { id: 11, name: 'wstyle11', image: '/assets/wstyle11.png' },
-  { id: 12, name: 'wstyle12', image: '/assets/wstyle12.png' },
-  { id: 13, name: 'wstyle13', image: '/assets/wstyle13.png' },
+  { id: 1, name: 'wstyle1', image: '/assets/WD (1).png' },
+  { id: 2, name: 'wstyle2', image: '/assets/WD (2).png' },
+  { id: 3, name: 'wstyle3', image: '/assets/WD (3).png' },
+  { id: 4, name: 'wstyle4', image: '/assets/WD (4).png' },
+  { id: 5, name: 'wstyle5', image: '/assets/WD (5).png' },
+  { id: 6, name: 'wstyle6', image: '/assets/WD (6).png' },
+  { id: 7, name: 'wstyle7', image: '/assets/WD (7).png' },
+  { id: 8, name: 'wstyle8', image: '/assets/WD (8).png' },
+  { id: 9, name: 'wstyle9', image: '/assets/WD (9).png' },
+  { id: 10, name: 'wstyle10', image: '/assets/WD (10).png' },
+  { id: 11, name: 'wstyle11', image: '/assets/WD (11).png' },
+];
 
+const ArtworkStyles = [
+  { id: 1, name: 'artworkstyle1', image: '/assets/AW (1).png' },
+  { id: 2, name: 'artworkstyle2', image: '/assets/AW (2).png' },
+  { id: 3, name: 'artworkstyle3', image: '/assets/AW (3).png' },
+  { id: 4, name: 'artworkstyle4', image: '/assets/AW (4).png' },
+  { id: 5, name: 'artworkstyle5', image: '/assets/AW (5).png' },
+  { id: 6, name: 'artworkstyle6', image: '/assets/AW (6).png' },
+  { id: 7, name: 'artworkstyle7', image: '/assets/AW (7).png' },
+  { id: 8, name: 'artworkstyle8', image: '/assets/AW (8).png' },
+  { id: 9, name: 'artworkstyle9', image: '/assets/AW (9).png' },
+  { id: 10, name: 'artworkstyle10', image: '/assets/AW (10).png' },
+  { id: 11, name: 'artworkstyle11', image: '/assets/AW (11).png' },
+  { id: 12, name: 'artworkstyle11', image: '/assets/AW (12).png' },
+  { id: 13, name: 'artworkstyle11', image: '/assets/AW (13).png' },
+  { id: 14, name: 'artworkstyle11', image: '/assets/AW (14).png' }
 ];
 
 const lightingStyles = [
-  { id: 1, name: 'lstyle1', image: '/assets/lstyle1.jpg' },
-  { id: 2, name: 'lstyle2', image: '/assets/lstyle2.jpg' },
-  { id: 3, name: 'lstyle3', image: '/assets/lstyle3.jpg' },
-  { id: 4, name: 'lstyle4', image: '/assets/lstyle4.jpg' },
-  { id: 5, name: 'lstyle5', image: '/assets/lstyle5.jpg' },
-  { id: 6, name: 'lstyle6', image: '/assets/lstyle6.jpg' },
-  { id: 7, name: 'lstyle7', image: '/assets/lstyle7.jpg' },
-  { id: 8, name: 'lstyle8', image: '/assets/lstyle8.jpg' },
-  { id: 9, name: 'lstyle9', image: '/assets/lstyle9.png' },
-  { id: 10, name: 'lstyle10', image: '/assets/lstyle10.png' },
-  { id: 11, name: 'lstyle11', image: '/assets/lstyle11.png' },
-  { id: 12, name: 'lstyle12', image: '/assets/lstyle12.png' },
-  { id: 13, name: 'lstyle13', image: '/assets/lstyle13.png' },
-  { id: 14, name: 'lstyle14', image: '/assets/lstyle14.png' },
-  { id: 15, name: 'lstyle15', image: '/assets/lstyle15.png' },
+  { id: 1, name: 'lstyle1', image: '/assets/LI (1).png' },
+  { id: 2, name: 'lstyle2', image: '/assets/LI (2).png' },
+  { id: 3, name: 'lstyle3', image: '/assets/LI (3).png' },
+  { id: 4, name: 'lstyle4', image: '/assets/LI (4).png' },
+  { id: 5, name: 'lstyle5', image: '/assets/LI (5).png' },
+  { id: 6, name: 'lstyle6', image: '/assets/LI (6).png' },
+  { id: 7, name: 'lstyle7', image: '/assets/LI (7).png' },
+  { id: 8, name: 'lstyle8', image: '/assets/LI (8).png' },
+  { id: 9, name: 'lstyle9', image: '/assets/LI (9).png' },
+  { id: 10, name: 'lstyle10', image: '/assets/LI (10).png' },
+  { id: 11, name: 'lstyle11', image: '/assets/LI (11).png' }
+];
+
+const WoodStyles = [
+  { id: 1, name: 'woodstyle1', image: '/assets/WP (1).png' },
+  { id: 2, name: 'woodstyle2', image: '/assets/WP (2).png' },
+  { id: 3, name: 'woodstyle3', image: '/assets/WP (3).png' }
 
 ];
 
 const FlooringStyles = [
-  { id: 1, name: 'flooring1', image: '/assets/flooring1.jpg' },
-  { id: 2, name: 'flooring2', image: '/assets/flooring2.jpg' },
-  { id: 3, name: 'flooring3', image: '/assets/flooring3.jpg' },
-  { id: 4, name: 'flooring4', image: '/assets/flooring4.jpg' },
-  { id: 5, name: 'flooring5', image: '/assets/flooring5.jpg' },
-  { id: 6, name: 'flooring6', image: '/assets/flooring6.jpg' },
-  { id: 7, name: 'flooring7', image: '/assets/flooring7.png' },
-  { id: 8, name: 'flooring8', image: '/assets/flooring8.png' },
-  { id: 9, name: 'flooring9', image: '/assets/flooring9.png' }
+  { id: 1, name: 'flooring1', image: '/assets/MR (1).JPG' },
+  { id: 2, name: 'flooring2', image: '/assets/MR (2).JPG' },
+  { id: 3, name: 'flooring3', image: '/assets/MR (3).JPG' },
+  { id: 4, name: 'flooring4', image: '/assets/MR (4).JPG' },
+  { id: 5, name: 'flooring5', image: '/assets/MR (5).JPG' },
+  { id: 6, name: 'flooring6', image: '/assets/MR (6).JPG' },
+  { id: 7, name: 'flooring7', image: '/assets/MR (7).JPG' },
+  { id: 8, name: 'flooring8', image: '/assets/MR (8).JPG' },
+  { id: 9, name: 'flooring9', image: '/assets/MR (9).JPG' },
+  { id: 10, name: 'flooring9', image: '/assets/MR (10).JPG' },
+  { id: 11, name: 'flooring9', image: '/assets/MR (11).JPG' },
+  { id: 12, name: 'flooring9', image: '/assets/MR (12).JPG' }
+];
+
+const PlantingStyles = [
+  { id: 1, name: 'planting1', image: '/assets/PL (1).png' },
+  { id: 2, name: 'planting2', image: '/assets/PL (2).png' },
+  { id: 3, name: 'planting3', image: '/assets/PL (3).png' },
+  { id: 4, name: 'planting4', image: '/assets/PL (4).png' },
+  { id: 5, name: 'planting5', image: '/assets/PL (5).png' },
+  { id: 6, name: 'planting6', image: '/assets/PL (6).png' },
+  { id: 7, name: 'planting7', image: '/assets/PL (7).png' },
+  { id: 8, name: 'planting8', image: '/assets/PL (8).png' },
+  { id: 9, name: 'planting9', image: '/assets/PL (9).png' },
+  { id: 10, name: 'planting9', image: '/assets/PL (10).png' },
+  { id: 11, name: 'planting9', image: '/assets/PL (11).png' },
+  { id: 12, name: 'planting9', image: '/assets/PL (12).png' },
+  { id: 13, name: 'planting9', image: '/assets/PL (13).png' }
 ];
 
 function App() {
   const [selectedWall, setSelectedWall] = useState(wallColors[0]);
   const [selectedFurniture, setSelectedFurniture] = useState(furnitureStyles[0]);
   const [selectedLighting, setSelectedLighting] = useState(lightingStyles[0]);
+  const [selectedWood, setSelectedWood] = useState(WoodStyles[0]);
+  const [selectedArtwork, setSelectedArtwork] = useState(ArtworkStyles[0]);
   const [selectedFlooring, setSelectedFlooring] = useState(FlooringStyles[0]);
+  const [selectedPlanting, setSelectedPlanting] = useState(PlantingStyles[0]);
   const [selectedWallStyle, setSelectedWallStyle] = useState(wallStyles[0]);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -137,17 +183,17 @@ const templateParams = {
  useEffect(() => {
   const spacing = 130; // Space between photos
   const totalWidth = 3 * spacing; // 3 photos horizontally
-  const totalHeight = Math.ceil([selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring].length / 2) * spacing; // Photos arranged in rows
+  const totalHeight = Math.ceil([selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring, selectedPlanting, selectedArtwork, selectedWood].length / 3) * spacing; // Photos arranged in rows
 
-  const positions = [selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring].map((_, index) => {
+  const positions = [selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring, selectedPlanting].map((_, index) => {
     const xOffset = (index % 3) * spacing - totalWidth / 5; // Shift photos to the center horizontally
-    const yOffset = Math.floor(index / 3) * spacing - totalHeight / 7; // Shift photos to the center vertically
+    const yOffset = Math.floor(index / 3) * spacing - totalHeight / 8; // Shift photos to the center vertically
     const rotation = Math.floor(Math.random() * 12 - 8); // Random rotation
     return { rotation, xOffset, yOffset };
   });
 
   setPhotoPositions(positions);
-}, [selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring]);
+}, [selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring, selectedPlanting, selectedArtwork, selectedWood]);
 
 
   return (
@@ -184,7 +230,29 @@ const templateParams = {
       </div>
 
       <div className="category">
-        <h2>Choose Flooring Style</h2>
+        <h2>Choose Art Work Style</h2>
+        {ArtworkStyles.map((artwork) => (
+          <img key={artwork.id} src={artwork.image} alt={artwork.name} onClick={() => setSelectedArtwork(artwork)} className={selectedArtwork.id === artwork.id ? 'selected' : ''} />
+        ))}
+      </div>
+
+      <div className="category">
+        <h2>Choose Planting Style</h2>
+        {PlantingStyles.map((planting) => (
+          <img key={planting.id} src={planting.image} alt={planting.name} onClick={() => setSelectedPlanting(planting)} className={selectedPlanting.id === planting.id ? 'selected' : ''} />
+        ))}
+      </div>
+
+      <div className="category">
+        <h2>Choose Wood Palette</h2>
+        {WoodStyles.map((woodstyle) => (
+          <img key={woodstyle.id} src={woodstyle.image} alt={woodstyle.name} onClick={() => setSelectedWood(woodstyle)} className={selectedWood.id === woodstyle.id ? 'selected' : ''} />
+        ))}
+      </div>
+
+
+      <div className="category">
+        <h2>Choose Flooring Marble Style</h2>
         {FlooringStyles.map((flooring) => (
           <img key={flooring.id} src={flooring.image} alt={flooring.name} onClick={() => setSelectedFlooring(flooring)} className={selectedFlooring.id === flooring.id ? 'selected' : ''} />
         ))}
@@ -192,7 +260,7 @@ const templateParams = {
 
 <div className="moodboard-preview" ref={moodboardRef}>
   <div className="moodboard-polaroid-frame">
-    {[selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring].map((item, index) => {
+    {[selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring, selectedPlanting, selectedArtwork, selectedWood].map((item, index) => {
       const position = photoPositions[index] || { rotation: 0, xOffset: 0, yOffset: 0 };
       const { rotation, xOffset, yOffset } = position;
 
@@ -216,6 +284,8 @@ const templateParams = {
     <div className="caption">Your Moodboard .. Great choices!</div>
   </div>
 </div>
+
+
 
 
       <form onSubmit={handleSubmit}>
