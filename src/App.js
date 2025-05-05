@@ -198,7 +198,7 @@ const templateParams = {
 
   return (
     <div className="App">
-      <img src="/assets/logo.jpg" alt="Designer Logo" className="logo" />
+      <img src="/assets/logo.png" alt="Designer Logo" className="logo" />
       <h1>Create Your Own Moodboard With Eman Designs</h1>
 
       <div className="category">
@@ -257,46 +257,41 @@ const templateParams = {
           <img key={flooring.id} src={flooring.image} alt={flooring.name} onClick={() => setSelectedFlooring(flooring)} className={selectedFlooring.id === flooring.id ? 'selected' : ''} />
         ))}
       </div>
-
-<div className="moodboard-preview" ref={moodboardRef}>
-  <div className="moodboard-polaroid-frame">
-    {[selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring, selectedPlanting, selectedArtwork, selectedWood].map((item, index) => {
-      const position = photoPositions[index] || { rotation: 0, xOffset: 0, yOffset: 0 };
-      const { rotation, xOffset, yOffset } = position;
-
-      return (
-        <img
-          key={index}
-          src={item.image}
-          alt={item.name}
-          className="stacked-photo"
-          style={{
-            transform: `rotate(${rotation}deg) translate(${xOffset}px, ${yOffset}px)`,
-            zIndex: index,
-          }}
-        />
-      );
-    })}
-
-    {/* Add the white border mask over the photos */}
-    <div className="polaroid-border-overlay"></div>
-
-    <div className="caption">Your Moodboard .. Great choices!</div>
+	  
+	 <>
+  <div className="moodboard-preview" ref={moodboardRef}>
+    <div
+      className="moodboard-polaroid-grid"
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/MBT.png)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+		
+      }}
+    >
+      {[selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring, selectedPlanting, selectedArtwork, selectedWood].map((item, index) => (
+        <div key={index} className="grid-photo-wrapper">
+          <img
+            src={item.image}
+            alt={item.name}
+            className="grid-photo"
+          />
+        </div>
+      ))}
+    </div>
   </div>
-</div>
 
+  <form onSubmit={handleSubmit}>
+    <h2>Enter Your Details to send your Mood Board & get 10% Discount code!</h2>
+    <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
+    <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+    <input type="tel" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+    <button type="submit">Submit</button>
+  </form>
+</>
+ 
 
-
-
-      <form onSubmit={handleSubmit}>
-        <h2>Enter Your Details to send your Mood Board & get 10% Discount code!</h2>
-        <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input type="tel" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
-        <div>
-		<button type="submit">Submit</button>
-		</div>
-      </form>
 
 <div className="qr-code text-center">
   <h3 className="mb-2 text-lg font-semibold">Scan this QR code to visit our Instagram!</h3>
