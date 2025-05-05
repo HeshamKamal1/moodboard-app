@@ -281,6 +281,7 @@ const templateParams = {
       ))}
     </div>
   </div>
+  
 
   <form onSubmit={handleSubmit}>
     <h2>Enter Your Details to send your Mood Board & get 10% Discount code!</h2>
