@@ -288,7 +288,9 @@ const templateParams = {
     <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
     <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
     <input type="tel" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
-    <button type="submit">Submit</button>
+    <div>
+	<button type="submit">Submit</button>
+	</div>
   </form>
 </>
  
