@@ -263,7 +263,7 @@ const templateParams = {
     <div
       className="moodboard-polaroid-grid"
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/MBT1.png)`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/MBT2.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
