@@ -263,14 +263,14 @@ const templateParams = {
     <div
       className="moodboard-polaroid-grid"
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/MBT.png)`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/MBT1.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
 		
       }}
     >
-      {[selectedWall, selectedFurniture, selectedWallStyle, selectedLighting, selectedFlooring, selectedPlanting, selectedArtwork, selectedWood].map((item, index) => (
+      {[selectedWallStyle, selectedLighting, selectedArtwork,selectedWall ,selectedFurniture ,selectedWood , selectedPlanting,selectedFlooring ].map((item, index) => (
         <div key={index} className="grid-photo-wrapper">
           <img
             src={item.image}
