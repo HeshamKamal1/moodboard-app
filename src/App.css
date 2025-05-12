@@ -146,12 +146,12 @@ form button:hover {
 .sponsor-logo {
   /*width: 160px;*/
   height: 60px;	
-  padding: 25px;
+  padding: 10px;
 }
 
 .sponsers {
-	margin-bottom: 25px;
-	margin-top: 25px;
+	margin-bottom: 15px;
+	margin-top: 15px;
 }
 
 .moodboard-polaroid-frame {
