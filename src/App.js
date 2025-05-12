@@ -3,7 +3,7 @@ import './App.css';
 import emailjs from 'emailjs-com';
 import html2canvas from 'html2canvas';
 
-const wallColors = [
+const DesignStyle = [
   { id: 1, name: 'color1', image: '/assets/Style1.png'  },
   { id: 2, name: 'color2', image: '/assets/Style2.png'  },
   { id: 3, name: 'color3', image: '/assets/Style3.png'  },
@@ -12,7 +12,7 @@ const wallColors = [
   { id: 6, name: 'color6', image: '/assets/Style6.png'  },
 ];
 
-const furnitureStyles = [
+const primarycolor = [
   { id: 1, name: 'fstyle1', image: '/assets/pcolor1.png' },
   { id: 2, name: 'fstyle2', image: '/assets/pcolor2.png' },
   { id: 3, name: 'fstyle3', image: '/assets/pcolor3.png' },
@@ -20,7 +20,7 @@ const furnitureStyles = [
   { id: 5, name: 'fstyle5', image: '/assets/pcolor5.png' },
 ];
 
-const wallStyles = [
+const secondrycolor = [
   { id: 1, name: 'wstyle1', image: '/assets/scolor1.png' },
   { id: 2, name: 'wstyle2', image: '/assets/scolor2.png' },
   { id: 3, name: 'wstyle3', image: '/assets/scolor3.png' },
@@ -45,7 +45,7 @@ const ArtworkStyles = [
   { id: 14, name: 'artworkstyle11', image: '/assets/AW (14).png' }
 ];
 
-const lightingStyles = [
+const accessoriesStyle = [
   { id: 1, name: 'lstyle1', image: '/assets/ac1.png' },
   { id: 2, name: 'lstyle2', image: '/assets/ac2.png' },
   { id: 3, name: 'lstyle3', image: '/assets/ac3.png' },
@@ -77,13 +77,13 @@ const FlooringStyles = [
 ];
 
 function App() {
-  const [selectedWall, setSelectedWall] = useState(wallColors[0]);
-  const [selectedFurniture, setSelectedFurniture] = useState(furnitureStyles[0]);
-  const [selectedLighting, setSelectedLighting] = useState(lightingStyles[0]);
+  const [selectedDesginStyle, setselectedDesginStyle] = useState(DesignStyle[0]);
+  const [selectedPrimaryColor, setselectedPrimaryColor] = useState(primarycolor[0]);
+  const [selectedAccessoriesStyle, setselectedAccessoriesStyle] = useState(accessoriesStyle[0]);
   const [selectedWood, setSelectedWood] = useState(WoodStyles[0]);
   const [selectedArtwork, setSelectedArtwork] = useState(ArtworkStyles[0]);
   const [selectedFlooring, setSelectedFlooring] = useState(FlooringStyles[0]);
-  const [selectedWallStyle, setSelectedWallStyle] = useState(wallStyles[0]);
+  const [selectedSecondryColor, setselectedSecondryColor] = useState(secondrycolor[0]);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -99,15 +99,15 @@ const templateParams = {
   name,
   phone,
   email,
-  selectedWall: selectedWall.name,
-  selectedFurniture: selectedFurniture.name,
-  selectedWallStyle: selectedWallStyle.name,
-  selectedLighting: selectedLighting.name,
+  selectedDesginStyle: selectedDesginStyle.name,
+  selectedPrimaryColor: selectedPrimaryColor.name,
+  selectedSecondryColor: selectedSecondryColor.name,
+  selectedAccessoriesStyle: selectedAccessoriesStyle.name,
   selectedFlooring: selectedFlooring.name,
-  wallImage: `${BASE_URL}${selectedWall.image}`,
-  furnitureImage: `${BASE_URL}${selectedFurniture.image}`,
-  wallStyleImage: `${BASE_URL}${selectedWallStyle.image}`,
-  lightingImage: `${BASE_URL}${selectedLighting.image}`,
+  wallImage: `${BASE_URL}${selectedDesginStyle.image}`,
+  furnitureImage: `${BASE_URL}${selectedPrimaryColor.image}`,
+  wallStyleImage: `${BASE_URL}${selectedSecondryColor.image}`,
+  lightingImage: `${BASE_URL}${selectedAccessoriesStyle.image}`,
   flooringImage: `${BASE_URL}${selectedFlooring.image}`,
 };
 
@@ -133,22 +133,22 @@ const [projectType, setProjectType] = useState('');
 
       <div className="category">
         <h2>Choose your prefered Style</h2>
-        {wallColors.map((wall) => (
-          <img key={wall.id} src={wall.image} alt={wall.name} onClick={() => setSelectedWall(wall)} className={`wall-color-img ${selectedWall.id === wall.id ? 'selected' : ''}`} />
+        {DesignStyle.map((wall) => (
+          <img key={wall.id} src={wall.image} alt={wall.name} onClick={() => setselectedDesginStyle(wall)} className={`wall-color-img ${selectedDesginStyle.id === wall.id ? 'selected' : ''}`} />
         ))}
       </div>
 
       <div className="category">
         <h2>Choose your Primary Color</h2>
-        {furnitureStyles.map((furniture) => (
-          <img key={furniture.id} src={furniture.image} alt={furniture.name} onClick={() => setSelectedFurniture(furniture)} className={selectedFurniture.id === furniture.id ? 'selected' : ''} />
+        {primarycolor.map((furniture) => (
+          <img key={furniture.id} src={furniture.image} alt={furniture.name} onClick={() => setselectedPrimaryColor(furniture)} className={`color-select ${selectedPrimaryColor.id === furniture.id ? 'selected' : ''}`} />
         ))}
       </div>
 
       <div className="category">
         <h2>Choose your Secondry Color</h2>
-        {wallStyles.map((style) => (
-          <img key={style.id} src={style.image} alt={style.name} onClick={() => setSelectedWallStyle(style)} className={selectedWallStyle?.id === style.id ? 'selected' : ''} />
+        {secondrycolor.map((style) => (
+          <img key={style.id} src={style.image} alt={style.name} onClick={() => setselectedSecondryColor(style)} className={`color-select ${selectedSecondryColor?.id === style.id ? 'selected' : ''}`} />
         ))}
       </div>
 
@@ -168,8 +168,8 @@ const [projectType, setProjectType] = useState('');
 	  
       <div className="category">
         <h2>Choose preferred Accessories</h2>
-        {lightingStyles.map((lighting) => (
-          <img key={lighting.id} src={lighting.image} alt={lighting.name} onClick={() => setSelectedLighting(lighting)} className={selectedLighting.id === lighting.id ? 'selected' : ''} />
+        {accessoriesStyle.map((lighting) => (
+          <img key={lighting.id} src={lighting.image} alt={lighting.name} onClick={() => setselectedAccessoriesStyle(lighting)} className={selectedAccessoriesStyle.id === lighting.id ? 'selected' : ''} />
         ))}
       </div>
 
@@ -197,7 +197,7 @@ const [projectType, setProjectType] = useState('');
       }}
     >
 			
-	      {[selectedWall].map((item, index) => (
+	      {[selectedDesginStyle].map((item, index) => (
         <div className="grid-photo-wrapper wall-span"  >
           <img
             src={item.image}
@@ -208,7 +208,7 @@ const [projectType, setProjectType] = useState('');
       ))}
 
 
-      {[ selectedWallStyle, selectedLighting, selectedArtwork, selectedFurniture ,selectedWood , selectedFlooring ].map((item, index) => (
+      {[ selectedSecondryColor,selectedPrimaryColor, selectedAccessoriesStyle,selectedArtwork ,   selectedWood , selectedFlooring ].map((item, index) => (
         <div key={index} className="grid-photo-wrapper">
           <img
             src={item.image}
