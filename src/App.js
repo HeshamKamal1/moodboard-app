@@ -124,7 +124,7 @@ const templateParams = {
     });
 };
 
-
+const [projectType, setProjectType] = useState('');
 
   return (
     <div className="App">
@@ -267,6 +267,19 @@ const templateParams = {
     <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
     <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
     <input type="tel" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+	
+<select 
+  className="form input"
+ value={projectType}
+  onChange={(e) => setProjectType(e.target.value)}
+  required
+>
+  <option value="">Select Project Type</option>
+  <option value="residential">Residential</option>
+  <option value="administrative">Administrative</option>
+  <option value="commercial">Commercial</option>
+</select>
+	
     <div>
 	<button type="submit">Submit</button>
 	</div>
