@@ -13,16 +13,16 @@ const wallColors = [
 ];
 
 const furnitureStyles = [
-  { id: 1, name: 'fstyle1', image: '/assets/PC5.png' },
+  { id: 1, name: 'fstyle1', image: '/assets/PC1.png' },
   { id: 2, name: 'fstyle2', image: '/assets/pc2.png' },
   { id: 3, name: 'fstyle3', image: '/assets/pc3.png' },
   { id: 4, name: 'fstyle4', image: '/assets/pc4.png' },
-  { id: 5, name: 'fstyle5', image: '/assets/pc1.png' },
+  { id: 5, name: 'fstyle5', image: '/assets/pc5.png' },
 ];
 
 const wallStyles = [
-  { id: 1, name: 'wstyle1', image: '/assets/sc2.png' },
-  { id: 2, name: 'wstyle2', image: '/assets/sc1.png' },
+  { id: 1, name: 'wstyle1', image: '/assets/sc1.png' },
+  { id: 2, name: 'wstyle2', image: '/assets/sc2.png' },
   { id: 3, name: 'wstyle3', image: '/assets/sc3.png' },
   { id: 4, name: 'wstyle4', image: '/assets/sc4.png' },
   { id: 5, name: 'wstyle5', image: '/assets/sc5.png' },
