@@ -4,12 +4,12 @@ import emailjs from 'emailjs-com';
 import html2canvas from 'html2canvas';
 
 const wallColors = [
-  { id: 1, name: 'color1', image: '/assets/Style1.png' },
-  { id: 2, name: 'color2', image: '/assets/Style2.png' },
-  { id: 3, name: 'color3', image: '/assets/Style3.png' },
-  { id: 4, name: 'color4', image: '/assets/Style4.png' },
-  { id: 5, name: 'color5', image: '/assets/Style5.png' },
-  { id: 6, name: 'color6', image: '/assets/Style6.png' },
+  { id: 1, name: 'color1', image: '/assets/Style1.png'  },
+  { id: 2, name: 'color2', image: '/assets/Style2.png'  },
+  { id: 3, name: 'color3', image: '/assets/Style3.png'  },
+  { id: 4, name: 'color4', image: '/assets/Style4.png'  },
+  { id: 5, name: 'color5', image: '/assets/Style5.png'  },
+  { id: 6, name: 'color6', image: '/assets/Style6.png'  },
 ];
 
 const furnitureStyles = [
