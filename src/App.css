@@ -150,8 +150,13 @@ form button:hover {
 }
 
 .sponsers {
-	margin-bottom: 15px;
-	margin-top: 15px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  background-color: white;
+  border-radius: 16px;
+  display: inline-block;
+  box-shadow: 0 0 15px rgba(192, 192, 192, 0.8);
+  padding: 8px;
 }
 
 .moodboard-polaroid-frame {
