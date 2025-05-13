@@ -135,6 +135,7 @@ const templateParams = {
   name,
   phone,
   email,
+  projectType,
   selectedDesginStyle: selectedDesginStyle.name,
   selectedPrimaryColor: selectedPrimaryColor.name,
   selectedSecondryColor: selectedSecondryColor.name,
@@ -149,7 +150,7 @@ const templateParams = {
 
 
   // Send the email using emailjs
-  emailjs.send('service_59fh789', 'template_p6alfzs', templateParams, 'cZRjJM3qtUzQmjiOv')
+  emailjs.send('service_jea37le', 'template_p6alfzs', templateParams, 'cZRjJM3qtUzQmjiOv')
     .then((response) => {
       console.log('Email sent successfully:', response);
       alert('Your Moodboard is ready! Check your email for the details.');
@@ -305,9 +306,9 @@ const [selections, setSelections] = useState({
     <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
     <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
     <input type="tel" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
-	
-<select 
-  className="form input"
+	<select 
+type ="ProjectType"
+placeholder="Project Type"
  value={projectType}
   onChange={(e) => setProjectType(e.target.value)}
   required
@@ -317,7 +318,10 @@ const [selections, setSelections] = useState({
   <option value="administrative">Administrative</option>
   <option value="commercial">Commercial</option>
 </select>
+
+
 	
+
     <div>
 	<button type="submit">Submit</button>
 	</div>
