@@ -13,19 +13,22 @@ const DesignStyle = [
 ];
 
 const primarycolor = [
-  { id: 1, name: 'fstyle1', image: '/assets/pcolor1.png' },
-  { id: 2, name: 'fstyle2', image: '/assets/pcolor2.png' },
-  { id: 3, name: 'fstyle3', image: '/assets/pcolor3.png' },
-  { id: 4, name: 'fstyle4', image: '/assets/pcolor4.png' },
-  { id: 5, name: 'fstyle5', image: '/assets/pcolor5.png' },
+  { id: 1, name: 'Beach Glass', image: '/assets/BeachGlass.png' },
+  { id: 2, name: 'primarycolor2', image: '/assets/BC2.png' },
+  { id: 3, name: 'primarycolor3', image: '/assets/BC3.png' },
+  { id: 4, name: 'Morning Fog', image: '/assets/MorningFog.png' },
+  { id: 5, name: 'Tricon Black', image: '/assets/TriconBlack.png' },
+  { id: 6, name: 'Turkish Coffee', image: '/assets/TurkishCoffee.png' },
 ];
 
 const secondrycolor = [
-  { id: 1, name: 'wstyle1', image: '/assets/scolor1.png' },
-  { id: 2, name: 'wstyle2', image: '/assets/scolor2.png' },
-  { id: 3, name: 'wstyle3', image: '/assets/scolor3.png' },
-  { id: 4, name: 'wstyle4', image: '/assets/scolor4.png' },
-  { id: 5, name: 'wstyle5', image: '/assets/scolor5.png' },
+  { id: 1, name: 'Decorative1', image: '/assets/deco1.png' },
+  { id: 2, name: 'Decorative2', image: '/assets/deco2.png' },
+  { id: 3, name: 'Decorative3', image: '/assets/deco3.png' },
+  { id: 4, name: 'Decorative4', image: '/assets/deco4.png' },
+  { id: 5, name: 'Decorative5', image: '/assets/deco5.png' },
+  { id: 6, name: 'Decorative6', image: '/assets/deco6.png' },
+  { id: 7, name: 'Decorative7', image: '/assets/deco7.png' },
 ];
 
 const ArtworkStyles = [
@@ -57,10 +60,41 @@ const accessoriesStyle = [
 ];
 
 const WoodStyles = [
-  { id: 1, name: 'woodstyle1', image: '/assets/WP (1).png' },
-  { id: 2, name: 'woodstyle2', image: '/assets/WP (2).png' },
-  { id: 3, name: 'woodstyle3', image: '/assets/WP (3).png' }
-
+  { id: 1, name: 'woodstyle1', image: '/assets/V01.png' },
+  { id: 2, name: 'woodstyle2', image: '/assets/V02.png' },
+  { id: 3, name: 'woodstyle3', image: '/assets/V03.png' },
+  { id: 4, name: 'woodstyle4', image: '/assets/V04.png' },
+  { id: 5, name: 'woodstyle5', image: '/assets/V05.png' },
+  { id: 6, name: 'woodstyle6', image: '/assets/V06.png' },
+  { id: 7, name: 'woodstyle7', image: '/assets/V07.png' },
+  { id: 8, name: 'woodstyle8', image: '/assets/V08.png' },
+  { id: 9, name: 'woodstyle9', image: '/assets/V10.png' },
+  { id: 10, name: 'woodstyle10', image: '/assets/V12.png' },
+  { id: 11, name: 'woodstyle11', image: '/assets/V13.png' },
+  { id: 12, name: 'woodstyle12', image: '/assets/V14.png' },
+  { id: 13, name: 'woodstyle13', image: '/assets/V15.png' },
+  { id: 14, name: 'woodstyle14', image: '/assets/V16.png' },
+  { id: 15, name: 'woodstyle15', image: '/assets/V18.png' },
+  { id: 16, name: 'woodstyle16', image: '/assets/V19.png' },
+  { id: 17, name: 'woodstyle17', image: '/assets/V20.png' },
+  { id: 18, name: 'woodstyle18', image: '/assets/V22.png' },
+  { id: 19, name: 'woodstyle19', image: '/assets/V23.png' },
+  { id: 20, name: 'woodstyle20', image: '/assets/V24.png' },
+  { id: 21, name: 'woodstyle21', image: '/assets/V25.png' },
+  { id: 22, name: 'woodstyle22', image: '/assets/C01.png' },
+  { id: 23, name: 'woodstyle23', image: '/assets/C02.png' },
+  { id: 24, name: 'woodstyle24', image: '/assets/C03.png' },
+  { id: 25, name: 'woodstyle25', image: '/assets/C04.png' },
+  { id: 26, name: 'woodstyle26', image: '/assets/C05.png' },
+  { id: 27, name: 'woodstyle27', image: '/assets/C06.png' },
+  { id: 28, name: 'woodstyle28', image: '/assets/C07.png' },
+  { id: 29, name: 'woodstyle29', image: '/assets/C11.png' },
+  { id: 30, name: 'woodstyle30', image: '/assets/C12.png' },
+  { id: 31, name: 'woodstyle31', image: '/assets/C13.png' },
+  { id: 32, name: 'woodstyle32', image: '/assets/C14.png' },
+  { id: 33, name: 'woodstyle33', image: '/assets/C15.png' },
+  { id: 34, name: 'woodstyle34', image: '/assets/C18.png' },
+  { id: 35, name: 'woodstyle35', image: '/assets/C19.png' },
 ];
 
 const FlooringStyles = [
@@ -128,6 +162,17 @@ const templateParams = {
 
 const [projectType, setProjectType] = useState('');
 
+const [selections, setSelections] = useState({
+  DesignStyle: '',
+  primarycolor: '',
+  secondrycolor: '',
+  ArtworkStyles: '',
+  accessoriesStyle: '',
+  WoodStyles: '',
+  FlooringStyles: '',
+});
+
+
   return (
     <div className="App">
       <img src="/assets/logo.png" alt="Designer Logo" className="logo" />
@@ -143,14 +188,14 @@ const [projectType, setProjectType] = useState('');
       <div className="category">
         <h2>Choose your Primary Color</h2>
         {primarycolor.map((furniture) => (
-          <img key={furniture.id} src={furniture.image} alt={furniture.name} onClick={() => setselectedPrimaryColor(furniture)} className={`color-select ${selectedPrimaryColor.id === furniture.id ? 'selected' : ''}`} />
+          <img key={furniture.id} src={furniture.image} alt={furniture.name} onClick={() => setselectedPrimaryColor(furniture)} className={` ${selectedPrimaryColor.id === furniture.id ? 'selected' : ''}`} />
         ))}
       </div>
 
       <div className="category">
-        <h2>Choose your Secondry Color</h2>
+        <h2>Choose your Decorative Color</h2>
         {secondrycolor.map((style) => (
-          <img key={style.id} src={style.image} alt={style.name} onClick={() => setselectedSecondryColor(style)} className={`color-select ${selectedSecondryColor?.id === style.id ? 'selected' : ''}`} />
+          <img key={style.id} src={style.image} alt={style.name} onClick={() => setselectedSecondryColor(style)} className={` ${selectedSecondryColor?.id === style.id ? 'selected' : ''}`} />
         ))}
       </div>
 
@@ -182,45 +227,33 @@ const [projectType, setProjectType] = useState('');
           <img key={woodstyle.id} src={woodstyle.image} alt={woodstyle.name} onClick={() => setSelectedWood(woodstyle)} className={selectedWood.id === woodstyle.id ? 'selected' : ''} />
         ))}
       </div>
-
-
- 
-	  
-	 <>
-  <div className="moodboard-preview" ref={moodboardRef}>
-    <div
-      className="moodboard-polaroid-grid"
-      style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/MBT2.png)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-		
-      }}
-    >
-			
-	      {[selectedDesginStyle].map((item, index) => (
-        <div className="grid-photo-wrapper wall-span"  >
+  	 <>
+	 
+	 
+	 
+<div className="moodboard-preview">
+  <div className="main-image">
+    {[selectedDesginStyle].map((item, index) => (     
           <img
             src={item.image}
             alt={item.name}
-            className="grid-photo"
           />
-        </div>
       ))}
-
-
-      {[ selectedSecondryColor,selectedPrimaryColor, selectedAccessoriesStyle,selectedArtwork ,   selectedWood , selectedFlooring ].map((item, index) => (
-        <div key={index} className="grid-photo-wrapper">
-          <img
-            src={item.image}
-            alt={item.name}
-            className="grid-photo"
-          />
-        </div>
-      ))}
-    </div>
   </div>
+  
+  <div className="side-images">
+         {[selectedPrimaryColor, selectedSecondryColor, selectedAccessoriesStyle,selectedArtwork ,   selectedWood , selectedFlooring ].map((item, index) => (
+          <img
+		    key={index}
+            src={item.image}
+            alt={item.name}
+            className="thumbnail"
+          />
+
+      ))}
+  </div>
+</div>
+
   
   
   <div className="sponsers">
@@ -234,6 +267,18 @@ const [projectType, setProjectType] = useState('');
   >
     <img
       src="/assets/onix-logo-white.png"
+      className="sponsor-logo w-24 h-24 mx-auto transition-transform duration-300 hover:scale-110 active:scale-95 hover:shadow-lg hover:shadow-pink-500/50"
+    />
+  </a>
+  
+  
+   <a
+    href="https://www.colortek.eu/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="/assets/ColorTek.png"
       className="sponsor-logo w-24 h-24 mx-auto transition-transform duration-300 hover:scale-110 active:scale-95 hover:shadow-lg hover:shadow-pink-500/50"
     />
   </a>

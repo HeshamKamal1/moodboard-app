@@ -68,26 +68,6 @@ h1 {
   background-color: #F5F5F5;
 }
 
-/*
-.wall-span img {
-  grid-column: 1;
-  grid-row: 1 / span 3;  /* ✅ force start at row 1 */
-  /*width: 200px !important;
-  height: auto !important;
-  top: 20px !important; /* Adjust the distance from the top */
-  /*left: 20px !important; /* Adjust the distance from the left */
-/*  z-index: 10 !important; /* Ensure the overlay is above the other images */
-/*}
-*/
-
-.moodboard-preview img {
-  width: 120px;
-  height: 120px;
-  /*margin: 5px;
-  box-shadow: 0 0 5px rgba(192, 192, 192, 2.5);*/
-  border-radius: 16px;
-}
-
 input, select {
   padding: 10px;
   font-size: 16px;
@@ -204,18 +184,7 @@ form button:hover {
   position: relative;
 }
 
-.polaroid-border-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none; /* Let clicks go through */
-  box-sizing: border-box;
-  border: var(--overlay-border, 10px) solid white; /* Adjust thickness here */
-  z-index: 99; /* Should be above all stacked photos */
-  border-radius: 8px;
-}
+
 
 .preview-container {
   position: relative;
@@ -236,34 +205,57 @@ form button:hover {
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-.moodboard-polaroid-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 5px;
-  padding: 12px;
-  position: relative;
-  z-index: 1;
-  grid-template-columns: repeat(3, auto); /* 4 columns */
-  border-radius: 20px; /* Adjust as needed */
-  overflow: hidden;    /* Ensures content inside respects the rounded corners */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  border: 10px solid white;
-  margin-top: 25px;
-}
 
-.grid-photo-wrapper {
-  /*background: white;
-  border: 6px solid white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);*/
+.moodboard-preview {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  width: 550px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Responsive fallback */
+  object-fit: cover;
+   background: white;
+  padding: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
 }
 
-.grid-photo {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  border-radius: 6px;
+.main-image {
+  flex: 1 1 37%; /* Takes 1/3 of the row */
+  max-width: 40%; /* Ensure it doesn't exceed the space */
 }
+
+.main-image img {
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  max-width: 120%; /* Prevents stretching */
+  /*box-shadow: 0 0 15px rgba(192, 192, 192, 0.8);*/
+  padding: 25px;
+}
+
+.side-images {
+  flex: 60%; /* Takes 2/3 of the row */
+  
+  flex-wrap: wrap;
+  gap: 10rem;
+  width: 120px;
+  height: auto;
+}
+
+.thumbnail {
+  width: 40%;
+  min-width: 100px;
+  max-width: 200px; /* Limit size */
+  object-fit: cover;
+  border-radius: 6px;
+  height: auto; /* Maintain aspect ratio */
+  padding: 3px;
+  border-radius: 16px;
+
+  /*display: inline-block;*/
+
+	
+}
+
