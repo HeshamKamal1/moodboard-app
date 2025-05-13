@@ -4,12 +4,12 @@ import emailjs from 'emailjs-com';
 import html2canvas from 'html2canvas';
 
 const DesignStyle = [
-  { id: 1, name: 'color1', image: '/assets/Style1.png'  },
-  { id: 2, name: 'color2', image: '/assets/Style2.png'  },
-  { id: 3, name: 'color3', image: '/assets/Style3.png'  },
-  { id: 4, name: 'color4', image: '/assets/Style4.png'  },
-  { id: 5, name: 'color5', image: '/assets/Style5.png'  },
-  { id: 6, name: 'color6', image: '/assets/Style6.png'  },
+  { id: 1, name: 'American Style', image: '/assets/AmericanStyle.jpg'  },
+  { id: 2, name: 'Boho Style', image: '/assets/BohoStyle.jpg'  },
+  { id: 3, name: 'Classic', image: '/assets/Classic.jpg'  },
+  { id: 4, name: 'Contemporary', image: '/assets/Contemporary.jpg'  },
+  { id: 5, name: 'Industrial Design', image: '/assets/IndustrialDesign.jpg'  },
+  { id: 6, name: 'Modern', image: '/assets/Modern.jpg'  },
 ];
 
 const primarycolor = [
@@ -46,12 +46,14 @@ const ArtworkStyles = [
 ];
 
 const accessoriesStyle = [
-  { id: 1, name: 'lstyle1', image: '/assets/ac1.png' },
-  { id: 2, name: 'lstyle2', image: '/assets/ac2.png' },
-  { id: 3, name: 'lstyle3', image: '/assets/ac3.png' },
-  { id: 4, name: 'lstyle4', image: '/assets/ac4.png' },
-  { id: 5, name: 'lstyle5', image: '/assets/ac5.png' },
-  { id: 6, name: 'lstyle6', image: '/assets/ac6.png' },
+  { id: 1, name: 'accessory1', image: '/assets/acc1.png' },
+  { id: 2, name: 'accessory2', image: '/assets/acc2.png' },
+  { id: 3, name: 'accessory3', image: '/assets/acc3.png' },
+  { id: 4, name: 'accessory4', image: '/assets/acc4.png' },
+  { id: 5, name: 'accessory5', image: '/assets/acc5.png' },
+  { id: 6, name: 'accessory6', image: '/assets/acc6.png' },
+  { id: 7, name: 'accessory6', image: '/assets/acc7.png' },
+  { id: 8, name: 'accessory6', image: '/assets/acc8.png' }
 ];
 
 const WoodStyles = [
@@ -223,16 +225,7 @@ const [projectType, setProjectType] = useState('');
   
   <div className="sponsers">
    <h2 className="mb-2 text-lg font-semibold">Sponsored by!</h2>
-    <a
-    href="https://jazeerapaints.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      src="/assets/jazeera-paints.png"
-      className="sponsor-logo w-24 h-24 mx-auto transition-transform duration-300 hover:scale-110 active:scale-95 hover:shadow-lg hover:shadow-pink-500/50"
-    />
-  </a>
+   
   
   <a
     href="https://onixmarble.com/"
