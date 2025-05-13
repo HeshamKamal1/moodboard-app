@@ -210,7 +210,7 @@ form button:hover {
   display: flex;
   gap: 1rem;
   padding: 1rem;
-  width: 490px;
+  width: 420px;
   align-items: flex-start;
   flex-wrap: wrap; /* Responsive fallback */
   object-fit: cover;
@@ -226,7 +226,7 @@ form button:hover {
 }
 
 .main-image img {
-  width: 220px;
+  width: 215px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
@@ -239,11 +239,11 @@ form button:hover {
 .side-images {
   flex: 33%; /* Takes 2/3 of the row */
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
   width: 120px;
   height: auto;
-  padding-top: 0.5em;
-  padding-left: 0.5em;
+  padding-top: 1em;
+  padding-left: 0.95em;
 }
 
 .thumbnail {
