@@ -210,48 +210,50 @@ form button:hover {
   display: flex;
   gap: 1rem;
   padding: 1rem;
-  width: 550px;
+  width: 490px;
   align-items: flex-start;
   flex-wrap: wrap; /* Responsive fallback */
   object-fit: cover;
-   background: white;
-  padding: 10px;
+  background: white;
+  padding: 1px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   border-radius: 16px;
 }
 
 .main-image {
-  flex: 1 1 37%; /* Takes 1/3 of the row */
+  flex: 33%; /* Takes 1/3 of the row */
   max-width: 40%; /* Ensure it doesn't exceed the space */
 }
 
 .main-image img {
-  width: 500px;
+  width: 220px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
   max-width: 120%; /* Prevents stretching */
   /*box-shadow: 0 0 15px rgba(192, 192, 192, 0.8);*/
-  padding: 25px;
+  padding: 10px;
+    border-radius: 16px;
 }
 
 .side-images {
-  flex: 60%; /* Takes 2/3 of the row */
-  
+  flex: 33%; /* Takes 2/3 of the row */
   flex-wrap: wrap;
-  gap: 10rem;
+  gap: 2rem;
   width: 120px;
   height: auto;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
 }
 
 .thumbnail {
-  width: 40%;
+  width: 42%;
   min-width: 100px;
   max-width: 200px; /* Limit size */
   object-fit: cover;
   border-radius: 6px;
   height: auto; /* Maintain aspect ratio */
-  padding: 3px;
+  padding: 2px;
   border-radius: 16px;
 
   /*display: inline-block;*/
