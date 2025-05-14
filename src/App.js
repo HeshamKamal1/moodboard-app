@@ -4,13 +4,14 @@ import emailjs from 'emailjs-com';
 import html2canvas from 'html2canvas';
 
 const DesignStyle = [
+  { id: 7, name: 'Modern', image: '/assets/Modern.jpg'  },
   { id: 1, name: 'American Style', image: '/assets/AmericanStyle.jpg'  },
   { id: 2, name: 'Boho Style', image: '/assets/style2.png'  },
   { id: 3, name: 'Classic', image: '/assets/style3.png'  },
     { id: 4, name: 'Modern', image: '/assets/Classic.jpg'  },
   { id: 5, name: 'Contemporary', image: '/assets/style4.png'  },
   { id: 6, name: 'Industrial Design', image: '/assets/IndustrialDesign.jpg'  },
-  { id: 7, name: 'Modern', image: '/assets/Modern.jpg'  },
+  
 
 ];
 
@@ -51,19 +52,19 @@ const ArtworkStyles = [
 ];
 
 const accessoriesStyle = [
+  { id: 7, name: 'accessory6', image: '/assets/acc7.png' },
   { id: 1, name: 'accessory1', image: '/assets/acc1.png' },
   { id: 2, name: 'accessory2', image: '/assets/acc2.png' },
   { id: 3, name: 'accessory3', image: '/assets/acc9.png' },
   { id: 4, name: 'accessory4', image: '/assets/acc4.png' },
   { id: 5, name: 'accessory5', image: '/assets/acc5.png' },
   { id: 6, name: 'accessory6', image: '/assets/acc6.png' },
-  { id: 7, name: 'accessory6', image: '/assets/acc7.png' },
   { id: 8, name: 'accessory6', image: '/assets/acc8.png' }
 ];
 
 const WoodStyles = [
-  { id: 1, name: 'woodstyle1', image: '/assets/V01.png' },
   { id: 2, name: 'woodstyle2', image: '/assets/V02.png' },
+  { id: 1, name: 'woodstyle1', image: '/assets/V01.png' },
   { id: 3, name: 'woodstyle3', image: '/assets/V03.png' },
   { id: 4, name: 'woodstyle4', image: '/assets/V04.png' },
   { id: 5, name: 'woodstyle5', image: '/assets/V05.png' },
@@ -245,15 +246,22 @@ const [selections, setSelections] = useState({
   </div>
   
   <div className="side-images">
-         {[selectedPrimaryColor, selectedSecondryColor, selectedAccessoriesStyle,selectedArtwork ,   selectedWood , selectedFlooring ].map((item, index) => (
+         {[selectedPrimaryColor, selectedSecondryColor, selectedArtwork, selectedAccessoriesStyle, selectedFlooring, selectedWood].map((item, index) => (
           <img
 		    key={index}
             src={item.image}
             alt={item.name}
             className="thumbnail"
           />
-
       ))}
+	  <div>
+<h5> 
+<em> 
+Your Mood Board is ready..<br></br>
+Great choices !
+</em></h5>
+</div>
+	  
   </div>
 </div>
 

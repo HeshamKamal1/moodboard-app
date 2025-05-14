@@ -14,8 +14,14 @@ body {
 h1 {
   font-size: 2rem;
   margin-bottom: 20px;
+  }
+h5 {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color:  grey;
+ 
+  }
   
-}
 
 .category {
   /*margin: 8px;*/
@@ -210,7 +216,7 @@ form button:hover {
   display: flex;
   gap: 1rem;
   padding: 1rem;
-  width: 420px;
+  width: 425px;
   align-items: flex-start;
   flex-wrap: wrap; /* Responsive fallback */
   object-fit: cover;
@@ -226,13 +232,13 @@ form button:hover {
 }
 
 .main-image img {
-  width: 215px;
+  width: 235px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
-  max-width: 120%; /* Prevents stretching */
+  max-width: 145%; /* Prevents stretching */
   /*box-shadow: 0 0 15px rgba(192, 192, 192, 0.8);*/
-  padding: 10px;
+  padding: 5px;
     border-radius: 16px;
 }
 
@@ -243,7 +249,7 @@ form button:hover {
   width: 120px;
   height: auto;
   padding-top: 1em;
-  padding-left: 0.95em;
+  padding-left: 1.85em;
 }
 
 .thumbnail {
@@ -253,7 +259,7 @@ form button:hover {
   object-fit: cover;
   border-radius: 6px;
   height: auto; /* Maintain aspect ratio */
-  padding: 2px;
+  padding: 1px;
   border-radius: 16px;
 
   /*display: inline-block;*/
