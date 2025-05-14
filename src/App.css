@@ -17,9 +17,9 @@ h1 {
   }
 h5 {
   font-size: 13px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   color:  grey;
- 
+ font-family: "Lucida Handwriting", "Cursive", monospace;
   }
   
 
@@ -232,11 +232,11 @@ form button:hover {
 }
 
 .main-image img {
-  width: 235px;
+  width: 230px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
-  max-width: 145%; /* Prevents stretching */
+  max-width: 129%; /* Prevents stretching */
   /*box-shadow: 0 0 15px rgba(192, 192, 192, 0.8);*/
   padding: 5px;
     border-radius: 16px;
@@ -245,7 +245,7 @@ form button:hover {
 .side-images {
   flex: 33%; /* Takes 2/3 of the row */
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0rem;
   width: 120px;
   height: auto;
   padding-top: 1em;
@@ -259,7 +259,7 @@ form button:hover {
   object-fit: cover;
   border-radius: 6px;
   height: auto; /* Maintain aspect ratio */
-  padding: 1px;
+  padding: 0.9px;
   border-radius: 16px;
 
   /*display: inline-block;*/
