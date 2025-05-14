@@ -5,11 +5,13 @@ import html2canvas from 'html2canvas';
 
 const DesignStyle = [
   { id: 1, name: 'American Style', image: '/assets/AmericanStyle.jpg'  },
-  { id: 2, name: 'Boho Style', image: '/assets/BohoStyle.jpg'  },
-  { id: 3, name: 'Classic', image: '/assets/Classic.jpg'  },
-  { id: 4, name: 'Contemporary', image: '/assets/Contemporary.jpg'  },
-  { id: 5, name: 'Industrial Design', image: '/assets/IndustrialDesign.jpg'  },
-  { id: 6, name: 'Modern', image: '/assets/Modern.jpg'  },
+  { id: 2, name: 'Boho Style', image: '/assets/style2.png'  },
+  { id: 3, name: 'Classic', image: '/assets/style3.png'  },
+    { id: 4, name: 'Modern', image: '/assets/Classic.jpg'  },
+  { id: 5, name: 'Contemporary', image: '/assets/style4.png'  },
+  { id: 6, name: 'Industrial Design', image: '/assets/IndustrialDesign.jpg'  },
+  { id: 7, name: 'Modern', image: '/assets/Modern.jpg'  },
+
 ];
 
 const primarycolor = [
@@ -32,26 +34,26 @@ const secondrycolor = [
 ];
 
 const ArtworkStyles = [
-  { id: 1, name: 'artworkstyle1', image: '/assets/AW (1).png' },
-  { id: 2, name: 'artworkstyle2', image: '/assets/AW (2).png' },
+  { id: 1, name: 'artworkstyle1', image: '/assets/waw1.png' },
+  { id: 2, name: 'artworkstyle2', image: '/assets/acc21.png' },
   { id: 3, name: 'artworkstyle3', image: '/assets/AW (3).png' },
-  { id: 4, name: 'artworkstyle4', image: '/assets/AW (4).png' },
+  { id: 4, name: 'artworkstyle4', image: '/assets/waw2.png' },
   { id: 5, name: 'artworkstyle5', image: '/assets/AW (5).png' },
-  { id: 6, name: 'artworkstyle6', image: '/assets/AW (6).png' },
+  //{ id: 6, name: 'artworkstyle6', image: '/assets/acc2.png' },
   { id: 7, name: 'artworkstyle7', image: '/assets/AW (7).png' },
-  { id: 8, name: 'artworkstyle8', image: '/assets/AW (8).png' },
-  { id: 9, name: 'artworkstyle9', image: '/assets/AW (9).png' },
-  { id: 10, name: 'artworkstyle10', image: '/assets/AW (10).png' },
-  { id: 11, name: 'artworkstyle11', image: '/assets/AW (11).png' },
+  { id: 8, name: 'artworkstyle8', image: '/assets/waw3.png' },
+  //{ id: 9, name: 'artworkstyle9', image: '/assets/AW (9).png' },
+  //{ id: 10, name: 'artworkstyle10', image: '/assets/AW (10).png' },
+  //{ id: 11, name: 'artworkstyle11', image: '/assets/AW (11).png' },
   { id: 12, name: 'artworkstyle11', image: '/assets/AW (12).png' },
-  { id: 13, name: 'artworkstyle11', image: '/assets/AW (13).png' },
-  { id: 14, name: 'artworkstyle11', image: '/assets/AW (14).png' }
+  { id: 13, name: 'artworkstyle11', image: '/assets/waw4.png' },
+  //{ id: 14, name: 'artworkstyle11', image: '/assets/AW (14).png' }
 ];
 
 const accessoriesStyle = [
   { id: 1, name: 'accessory1', image: '/assets/acc1.png' },
   { id: 2, name: 'accessory2', image: '/assets/acc2.png' },
-  { id: 3, name: 'accessory3', image: '/assets/acc3.png' },
+  { id: 3, name: 'accessory3', image: '/assets/acc9.png' },
   { id: 4, name: 'accessory4', image: '/assets/acc4.png' },
   { id: 5, name: 'accessory5', image: '/assets/acc5.png' },
   { id: 6, name: 'accessory6', image: '/assets/acc6.png' },
@@ -208,7 +210,7 @@ const [selections, setSelections] = useState({
       </div>
 
       <div className="category">
-        <h2>Choose Art Work Style</h2>
+        <h2>Choose Wall Art Work Style</h2>
         {ArtworkStyles.map((artwork) => (
           <img key={artwork.id} src={artwork.image} alt={artwork.name} onClick={() => setSelectedArtwork(artwork)} className={selectedArtwork.id === artwork.id ? 'selected' : ''} />
         ))}
