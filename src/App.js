@@ -254,15 +254,15 @@ const [selections, setSelections] = useState({
             className="thumbnail"
           />
       ))}
-	  <div>
-<h5> 
-<em> 
+	  
+<div>
+<h5> <em> 
 Your Mood Board is ready..<br></br>
 Great choices !
 </em></h5>
-</div>
+</div> 
 	  
-  </div>
+  </div>  
 </div>
 
   
