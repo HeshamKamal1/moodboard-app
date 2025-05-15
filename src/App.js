@@ -255,18 +255,18 @@ const [selections, setSelections] = useState({
           />
       ))}
 	  
-<div>
+
+	  
+  </div>  
+
+<div className="moodboardready">
 <h5> <em> 
 Your Mood Board is ready..<br></br>
 Great choices !
 </em></h5>
 </div> 
-	  
-  </div>  
-</div>
-
   
-  
+</div>  
   <div className="sponsers">
    <h2 className="mb-2 text-lg font-semibold">Sponsored by!</h2>
    
@@ -312,7 +312,7 @@ Great choices !
    
 
   <form onSubmit={handleSubmit}>
-    <h2>Enter Your Details to send your Mood Board & get 10% Discount code!</h2>
+    <h2>Enter Your Details to send your Mood Board & get 10% Discount code & FREE design consultation!</h2>
     <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
     <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
     <input type="tel" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
