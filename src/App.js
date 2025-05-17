@@ -52,9 +52,9 @@ const ArtworkStyles = [
 ];
 
 const accessoriesStyle = [
+  { id: 2, name: 'accessory2', image: '/assets/acc2.png' },
   { id: 7, name: 'accessory6', image: '/assets/acc7.png' },
   { id: 1, name: 'accessory1', image: '/assets/acc1.png' },
-  { id: 2, name: 'accessory2', image: '/assets/acc2.png' },
   { id: 3, name: 'accessory3', image: '/assets/acc9.png' },
   { id: 4, name: 'accessory4', image: '/assets/acc4.png' },
   { id: 5, name: 'accessory5', image: '/assets/acc5.png' },
