@@ -9,7 +9,7 @@ const DesignStyle = [
   { id: 2, name: 'Boho Style', image: '/assets/style2.png'  },
   { id: 3, name: 'Classic', image: '/assets/style3.png'  },
     { id: 4, name: 'Modern', image: '/assets/Classic.jpg'  },
-  { id: 5, name: 'Contemporary', image: '/assets/style4.png'  },
+  { id: 5, name: 'Contemporary', image: '/assets/style4.png'},
   { id: 6, name: 'Industrial Design', image: '/assets/IndustrialDesign.jpg'  },
   
 
@@ -209,6 +209,14 @@ const [selections, setSelections] = useState({
           <img key={flooring.id} src={flooring.image} alt={flooring.name} onClick={() => setSelectedFlooring(flooring)} className={selectedFlooring.id === flooring.id ? 'selected' : ''} />
         ))}
       </div>
+	  
+	  
+      <div className="category">
+        <h2>Choose Wood Palette</h2>
+        {WoodStyles.map((woodstyle) => (
+          <img key={woodstyle.id} src={woodstyle.image} alt={woodstyle.name} onClick={() => setSelectedWood(woodstyle)} className={selectedWood.id === woodstyle.id ? 'selected' : ''} />
+        ))}
+      </div>
 
       <div className="category">
         <h2>Choose Wall Art Work Style</h2>
@@ -225,12 +233,6 @@ const [selections, setSelections] = useState({
       </div>
 
 
-      <div className="category">
-        <h2>Choose Wood Palette</h2>
-        {WoodStyles.map((woodstyle) => (
-          <img key={woodstyle.id} src={woodstyle.image} alt={woodstyle.name} onClick={() => setSelectedWood(woodstyle)} className={selectedWood.id === woodstyle.id ? 'selected' : ''} />
-        ))}
-      </div>
   	 <>
 	 
 	 

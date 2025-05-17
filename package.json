@@ -2,6 +2,38 @@
   "name": "moodboard-game",
   "version": "0.1.0",
   "private": true,
+  "main": "electron.js",
+  "description": "Moodboard desktop app",
+  "author": "Hesham Kamal",
+  "homepage": "./",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.moodboard.app",
+    "productName": "MoodboardApp",
+    "files": [
+      "build/**/*",
+      "electron.js",      
+      "package.json",
+	  "public/**/*" 
+    ],
+	  "extraMetadata": {
+    "main": "electron.js"
+  },
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
+  },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -14,11 +46,9 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "electron": "^36.2.1",
+    "electron-builder": "^26.0.12"
   },
   "eslintConfig": {
     "extends": [
@@ -38,4 +68,5 @@
       "last 1 safari version"
     ]
   }
+  
 }
